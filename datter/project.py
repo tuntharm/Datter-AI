@@ -131,3 +131,63 @@ def default_project_id(root: Path | None = None) -> str:
         if any(p.id == preferred for p in projects):
             return preferred
     return projects[0].id if projects else "lab"
+
+
+def _upload_specs(uploads: list) -> list[tuple[str, int]]:
+    specs: list[tuple[str, int]] = []
+    for upload in uploads:
+        name = Path(upload.name).name.lower()
+        if Path(name).suffix.lower() not in {".pdf", ".txt", ".md"}:
+            continue
+        size = getattr(upload, "size", None)
+        if size is None:
+            size = len(upload.getvalue())
+        specs.append((name, int(size)))
+    return specs
+
+
+def _project_fingerprints(project: Project) -> set[tuple[str, int]]:
+    fps: set[tuple[str, int]] = set()
+    for name in project.pdf_files:
+        path = project.corpus_path / name
+        if path.is_file():
+            fps.add((name.lower(), path.stat().st_size))
+    return fps
+
+
+def _project_for_unique_pdf_size(size: int, root: Path | None = None) -> Project | None:
+    matches: list[Project] = []
+    for project in load_projects(root):
+        if any(pdf_size == size for _, pdf_size in _project_fingerprints(project)):
+            matches.append(project)
+    if len(matches) == 1:
+        return matches[0]
+    return None
+
+
+def match_upload_to_project(uploads: list, root: Path | None = None) -> Project | None:
+    """Match uploaded files to a known sample project by filename or byte fingerprint."""
+    specs = _upload_specs(uploads)
+    if not specs:
+        return None
+
+    upload_names = {name for name, _ in specs}
+    upload_fps = set(specs)
+
+    for project in load_projects(root):
+        project_names = {name.lower() for name in project.pdf_files}
+        project_fps = _project_fingerprints(project)
+
+        if upload_names == project_names:
+            return project
+        if len(specs) == 1 and specs[0][0] in project_names:
+            return project
+        if project_fps and upload_fps == project_fps:
+            return project
+        if len(specs) == 1 and specs[0] in project_fps:
+            return project
+
+    if len(specs) == 1:
+        return _project_for_unique_pdf_size(specs[0][1], root)
+
+    return None

@@ -9,7 +9,7 @@ import streamlit as st
 from datter.agent import AnalysisAgent
 from datter.export import export_zip
 from datter.models import AgentLogEntry, AnalysisReport, ScorerConfig
-from datter.project import Project, load_projects
+from datter.project import Project, load_projects, match_upload_to_project
 from datter.report import report_to_json, report_to_markdown
 from datter.token_cost import DEFAULT_EMBEDDING_COST_PER_M, DEFAULT_TOKEN_COST_PER_M
 
@@ -67,13 +67,56 @@ def inject_styles() -> None:
             font-size: 15px;
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
+            background-color: #0b0f14;
         }
         .stApp {
             background: radial-gradient(1200px 600px at 10% -10%, #152033 0%, #0b0f14 55%);
             font-family: 'DM Sans', sans-serif;
             color: #c8d0dc;
         }
-        .block-container { padding-top: 1.25rem; max-width: 1320px; }
+        header[data-testid="stHeader"],
+        .stApp > header {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        div[data-testid="stDecoration"] { display: none; }
+        [data-testid="stAppViewContainer"] {
+            background-color: #0b0f14;
+        }
+        [data-testid="stMain"] > div:first-child {
+            background: transparent;
+            border: none;
+        }
+        .block-container {
+            padding-top: 1.5rem;
+            padding-bottom: 3.5rem;
+            max-width: 1320px;
+        }
+        [data-testid="stHorizontalBlock"] {
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+        [data-testid="stHorizontalBlock"] > [data-testid="column"]:first-child {
+            padding-right: 0.75rem;
+            min-width: 320px;
+        }
+        [data-testid="stHorizontalBlock"] > [data-testid="column"]:last-child {
+            padding-left: 0.25rem;
+        }
+        div[data-testid="stProgress"] {
+            margin: 0.5rem 0 1rem;
+        }
+        div[data-testid="stProgress"] > label {
+            margin-top: 0.65rem;
+            padding-top: 0.15rem;
+            font-size: 0.88rem;
+            color: #8b98ab;
+        }
+        div[data-testid="stProgress"] > label p {
+            margin: 0;
+            line-height: 1.45;
+        }
         h1, h2, h3, h4, p, label { font-family: 'DM Sans', sans-serif !important; }
         .stMarkdown, .stCaption { color: #8b98ab; font-size: 0.93rem; line-height: 1.5; }
         .datter-brand {
@@ -213,10 +256,10 @@ def inject_styles() -> None:
         .ig-upload-wrap {
             border: 2px dashed #3a465a;
             border-radius: 10px;
-            padding: 1.35rem 1.1rem;
+            padding: 1.5rem 1.25rem;
             text-align: center;
             background: rgba(18, 24, 32, 0.5);
-            margin-bottom: 0.85rem;
+            margin-bottom: 1rem;
         }
         .ig-upload-wrap .icon { font-size: 1.85rem; margin-bottom: 0.4rem; opacity: 0.7; }
         .ig-upload-wrap .title { color: #e8edf5; font-weight: 600; font-size: 1.02rem; line-height: 1.35; }
@@ -260,21 +303,18 @@ def inject_styles() -> None:
         .ig-regime .pct { font-size: 1.45rem; font-weight: 700; color: #e8edf5; font-family: 'IBM Plex Mono', monospace; line-height: 1.2; }
         .ig-regime .label { font-size: 0.74rem; color: #8b98ab; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 0.25rem; line-height: 1.3; }
         .ig-regime .hint { font-size: 0.78rem; color: #5c6878; margin-top: 0.3rem; line-height: 1.4; }
-        .ig-cta-row {
-            background: #121820;
-            border: 1px solid #2a3548;
-            border-radius: 12px;
-            padding: 0.95rem 1.1rem;
-            margin: 0.85rem 0;
+        .ig-export-panel {
+            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
         }
-        .ig-cta-label {
-            font-size: 0.74rem;
-            color: #6b7789;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.55rem;
-            line-height: 1.3;
+        .ig-export-panel h3 { margin-bottom: 0; }
+        .ig-scan-status {
+            margin: 0.35rem 0 0.75rem;
+            color: #8b98ab;
+            font-size: 0.88rem;
+            line-height: 1.5;
         }
+        .ig-scan-status strong { color: #e8edf5; }
         .datter-warn {
             background: rgba(245,200,66,0.08);
             border: 1px solid rgba(245,200,66,0.35);
@@ -455,10 +495,10 @@ def render_quality_panel(report: AnalysisReport) -> None:
     else:
         pct = quality_score(report)
         hero_class = "white"
-        sub = "structural proxy — no eval queries run"
+        sub = "mean chunk usefulness — not Q&A understanding"
         disclaimer = (
-            '<p class="ig-disclaimer">Upload a sample corpus or add queries.json '
-            "for proof-loop understanding metrics.</p>"
+            '<p class="ig-disclaimer">No eval queries attached. Use <b>Try sample</b> '
+            "in the sidebar, upload a known demo PDF, or add queries.json for proof-loop metrics.</p>"
         )
     st.markdown(
         f"""
@@ -534,8 +574,15 @@ def render_download_ctas(report: AnalysisReport) -> None:
     if report.selection and report.chunks:
         zip_bytes = export_zip(report.chunks, report.scores, report.selection)
 
-    st.markdown('<div class="ig-cta-row"><div class="ig-cta-label">Export & next steps</div>', unsafe_allow_html=True)
-    c1, c2 = st.columns(2)
+    st.markdown(
+        """
+        <div class="ig-panel ig-export-panel">
+            <h3>Export & next steps</h3>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    c1, c2 = st.columns(2, gap="medium")
     with c1:
         if zip_bytes:
             st.download_button(
@@ -553,7 +600,6 @@ def render_download_ctas(report: AnalysisReport) -> None:
             file_name="datter_report.md",
             use_container_width=True,
         )
-    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def render_results_panels(report: AnalysisReport) -> None:
@@ -633,12 +679,17 @@ def run_streaming(
         if isinstance(event, list):
             progress_bar.progress(progress_from_log(event), text="Structural Scan")
             status_slot.markdown(
-                f"**Processing…**  \n{latest_log_message(event)}",
+                f'<p class="ig-scan-status"><strong>Processing…</strong><br>'
+                f"{latest_log_message(event)}</p>",
+                unsafe_allow_html=True,
             )
         elif isinstance(event, AnalysisReport):
             report = event
             progress_bar.progress(1.0, text="Complete")
-            status_slot.markdown("**Complete** — audit ready.")
+            status_slot.markdown(
+                '<p class="ig-scan-status"><strong>Complete</strong> — audit ready.</p>',
+                unsafe_allow_html=True,
+            )
     return report
 
 
@@ -647,8 +698,12 @@ def build_agent(
     token_cost: float,
     embed_cost: float,
     project: Project | None = None,
+    uploads: list | None = None,
 ) -> AnalysisAgent:
     config = ScorerConfig()
+    if project is None and uploads:
+        project = match_upload_to_project(uploads, ROOT)
+
     if project:
         return AnalysisAgent(
             scorer_mode=scorer_mode,
@@ -709,7 +764,13 @@ def render_input_gate_left(scanning: bool) -> list:
     if scanning:
         st.markdown("#### Structural Scan")
     elif uploads:
-        st.success(f"{len(uploads)} file(s) ready — scan runs automatically.")
+        matched = match_upload_to_project(uploads, ROOT)
+        if matched:
+            st.success(
+                f"{len(uploads)} file(s) ready — matched **{matched.name}**; proof loop runs on scan."
+            )
+        else:
+            st.success(f"{len(uploads)} file(s) ready — scan runs automatically.")
     else:
         st.info("Upload PDF, TXT, or MD files to begin.")
 
@@ -803,7 +864,7 @@ with st.sidebar:
         else:
             st.warning("Upload files or load a sample first.")
 
-left_col, right_col = st.columns([0.35, 0.65], gap="large")
+left_col, right_col = st.columns([2, 3], gap="large")
 
 with left_col:
     progress_bar = st.empty()
@@ -837,7 +898,7 @@ if should_run:
                 stream = agent.stream_from_folder(str(project.corpus_path))
                 report = run_streaming(agent, stream, progress_bar, status_slot)
         elif st.session_state.run_mode == "upload" and uploads:
-            agent = build_agent(project=None, **agent_kwargs)
+            agent = build_agent(project=None, uploads=uploads, **agent_kwargs)
             stream = agent.stream_from_uploads(uploads)
             report = run_streaming(agent, stream, progress_bar, status_slot)
         else:
