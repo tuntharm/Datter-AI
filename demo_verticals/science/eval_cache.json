@@ -1,0 +1,132 @@
+{
+  "mean_full_score": 100.0,
+  "mean_datter_score": 91.6,
+  "mean_random_score": 66.3,
+  "understanding_pct": 91.6,
+  "random_understanding_pct": 91.6,
+  "quality_floor": 0.9,
+  "target_reduction": 0.5,
+  "actual_reduction": 0.6123,
+  "max_safe_reduction_pct": 61.2,
+  "meets_quality_floor": true,
+  "disclaimer": "Building demo \u2014 offline understanding proxy (TF-IDF retrieval + token overlap). Production claims use developed eval harness.",
+  "questions": [
+    {
+      "question_id": "q1",
+      "query": "What is CLIMBER-X and what does it model?",
+      "full_answer": "By perturbing the near atmospheric sur-\nface temperature as a rapid-varying variable in the CLIMBER-X model, we have transformed\nit into a stochastic model, allowing for the representation of natural variability and uncertain-\nties. This approach not only leverages the computational efficiency of CLIMBER-X but also\nprovides more realistic background states for our DA system and avoids the ensemble col-\nlapses to a single state. https://doi.o rg/10.1371/j ournal.pone .0300138.g009\nPLOS ONE\nPaleoc",
+      "datter_answer": "By perturbing the near atmospheric sur-\nface temperature as a rapid-varying variable in the CLIMBER-X model, we have transformed\nit into a stochastic model, allowing for the representation of natural variability and uncertain-\nties. This approach not only leverages the computational efficiency of CLIMBER-X but also\nprovides more realistic background states for our DA system and avoids the ensemble col-\nlapses to a single state. https://doi.o rg/10.1371/j ournal.pone .0300138.g009\nPLOS ONE\nPaleoc",
+      "random_answer": "By perturbing the near atmospheric sur-\nface temperature as a rapid-varying variable in the CLIMBER-X model, we have transformed\nit into a stochastic model, allowing for the representation of natural variability and uncertain-\nties. This approach not only leverages the computational efficiency of CLIMBER-X but also\nprovides more realistic background states for our DA system and avoids the ensemble col-\nlapses to a single state. https://doi.o rg/10.1371/j ournal.pone .0300138.g009\nPLOS ONE\nPaleoc",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: earth, ice, sheet"
+    },
+    {
+      "question_id": "q2",
+      "query": "What paleoclimate period does the study focus on?",
+      "full_answer": "The dataset\nincludes well-dated temperature records from the last glacial period, including sixty-seven rec-\nords from the ocean, interpreted as sea STs, and thirteen records for temperatures at the land\nsurface. Since the dataset does not contain ST errors for the proxy sites, we translate the age model\nuncertainties into temperature uncertainties. Observations\nWe use the dataset provided by [9] as observations in the data assimilation system. RESEA RCH ARTICL E\nPaleoclimate data assimilation w",
+      "datter_answer": "The dataset\nincludes well-dated temperature records from the last glacial period, including sixty-seven rec-\nords from the ocean, interpreted as sea STs, and thirteen records for temperatures at the land\nsurface. Since the dataset does not contain ST errors for the proxy sites, we translate the age model\nuncertainties into temperature uncertainties. Observations\nWe use the dataset provided by [9] as observations in the data assimilation system. RESEA RCH ARTICL E\nPaleoclimate data assimilation w",
+      "random_answer": "The dataset\nincludes well-dated temperature records from the last glacial period, including sixty-seven rec-\nords from the ocean, interpreted as sea STs, and thirteen records for temperatures at the land\nsurface. Since the dataset does not contain ST errors for the proxy sites, we translate the age model\nuncertainties into temperature uncertainties. Observations\nWe use the dataset provided by [9] as observations in the data assimilation system. Previous studies of DA in paleoclimate have focused",
+      "datter_score": 100.0,
+      "random_score": 52.5,
+      "missing_points": "Missing key terms: past, simulation"
+    },
+    {
+      "question_id": "q3",
+      "query": "How does the model represent ice sheet dynamics?",
+      "full_answer": "GLAC-1D contains a significant ice volume loss dur-\ning BA ([42]), associated with a pronounced meltwater pulse 1A (MWP-1A), whereas Paleo-\nMist ([43]) does not contain a pronounced loss of deglacial meltwater during the BA. Due to varia-\ntions in methodologies, PaleoMist estimates the ice volume and ice sheet heights differently\nfrom GLAC-1D. Mentioning briefly, PaleoMist calculates ice sheets using the program ICE-\nSHEET, which assumes that the ice sheet is in equilibrium ([80]). In addition, ",
+      "datter_answer": "GLAC-1D contains a significant ice volume loss dur-\ning BA ([42]), associated with a pronounced meltwater pulse 1A (MWP-1A), whereas Paleo-\nMist ([43]) does not contain a pronounced loss of deglacial meltwater during the BA. Due to varia-\ntions in methodologies, PaleoMist estimates the ice volume and ice sheet heights differently\nfrom GLAC-1D. Mentioning briefly, PaleoMist calculates ice sheets using the program ICE-\nSHEET, which assumes that the ice sheet is in equilibrium ([80]). In addition, ",
+      "random_answer": "GLAC-1D contains a significant ice volume loss dur-\ning BA ([42]), associated with a pronounced meltwater pulse 1A (MWP-1A), whereas Paleo-\nMist ([43]) does not contain a pronounced loss of deglacial meltwater during the BA. Due to varia-\ntions in methodologies, PaleoMist estimates the ice volume and ice sheet heights differently\nfrom GLAC-1D. Mentioning briefly, PaleoMist calculates ice sheets using the program ICE-\nSHEET, which assumes that the ice sheet is in equilibrium ([80]). However, they",
+      "datter_score": 100.0,
+      "random_score": 61.6,
+      "missing_points": "Missing key terms: component, dynamics"
+    },
+    {
+      "question_id": "q4",
+      "query": "What climate variables are simulated?",
+      "full_answer": "Nevertheless, the effect of\nthe online approach is not notable on the climate variables primarily due to the long time\ngaps between DA cycles and due to the fact that temperature is damped out faster than other\nvariables like salinity ([90]). Considering its climate sensitivity, CLIMBER-X performs relatively more accurately\nin low latitudes, where the main driver is CO\n2\nforcing, compared to high latitudes. \u2022 Our online DA approach allows us to study the performance of CLIMBER-X, including\nAMOC,",
+      "datter_answer": "Climate variables trajectories in Exp_PaleoMi st. The blue line in (d) is the DA-based reconstruc tion of \u0394GMST by [25]. https://d oi.org/10.1371/j ournal.pon e.0300138.g0 06\nPLOS ONE\nPaleocl imate data assimilation with CLIMBER-X: An ensemble Kalman filter for the last deglacia tion\nPLOS ONE | https://doi.or g/10.137 1/journal.po ne.03001 38 April 4, 2024 10 / 22\nFig 7. Moreover, they largely focused on reconstructing one observed variable, mainly surface\ntemperature, and did not investigate th",
+      "random_answer": "Climate variables trajectories in Exp_PaleoMi st. The blue line in (d) is the DA-based reconstruc tion of \u0394GMST by [25]. https://d oi.org/10.1371/j ournal.pon e.0300138.g0 06\nPLOS ONE\nPaleocl imate data assimilation with CLIMBER-X: An ensemble Kalman filter for the last deglacia tion\nPLOS ONE | https://doi.or g/10.137 1/journal.po ne.03001 38 April 4, 2024 10 / 22\nFig 7. Moreover, they largely focused on reconstructing one observed variable, mainly surface\ntemperature, and did not investigate th",
+      "datter_score": 68.6,
+      "random_score": 68.6,
+      "missing_points": "Missing key terms: carbon, precipitation"
+    },
+    {
+      "question_id": "q5",
+      "query": "How is model validation performed?",
+      "full_answer": "The model is subsequently run until the year 6.5 kyr BP using\nprescribed time-varying topography, bathymetry, ocean, greenhouse gases (GHGs), and\norbital forcing. An implicit assumption in a DA system\nfor the optimal combination of model predictions and observations is that data and model\nerrors are random with a mean of zero (i.e. Two experiments are performed. The dataset contains the absolute temperature values of each proxy site (green dots in\nFig 2), the published age, and the corresponding",
+      "datter_answer": "The model is subsequently run until the year 6.5 kyr BP using\nprescribed time-varying topography, bathymetry, ocean, greenhouse gases (GHGs), and\norbital forcing. An implicit assumption in a DA system\nfor the optimal combination of model predictions and observations is that data and model\nerrors are random with a mean of zero (i.e. Two experiments are performed. The dataset contains the absolute temperature values of each proxy site (green dots in\nFig 2), the published age, and the corresponding",
+      "random_answer": "The dataset contains the absolute temperature values of each proxy site (green dots in\nFig 2), the published age, and the corresponding errors of the age model (\u03c3). Since the dataset does not contain ST errors for the proxy sites, we translate the age model\nuncertainties into temperature uncertainties. Experimental design\nThe combination of our model with PDAF can simultaneously run the transient simulation\nand DA without restarting the model. [1, 9]), a coherent pattern is still unknown, and cl",
+      "datter_score": 100.0,
+      "random_score": 73.6,
+      "missing_points": "Missing key terms: comparison, observational, validation"
+    },
+    {
+      "question_id": "q6",
+      "query": "What are the main findings about past climate states?",
+      "full_answer": "DA has been recently applied to reconstruct, for instance, the climate of the past\nmillennium (e.g. In a DA system, the data provide climate information at the sites, and the model fills in\nthe missing information about the other locations by adding model dynamics and error bars\nfrom the data and the model ([26]). Data Availabilit y Statement: All relevant data are\nwithin the manuscript and its Support ing\ninformation files. They also draw the prior states from the separate\ntime slice simulation",
+      "datter_answer": "DA has been recently applied to reconstruct, for instance, the climate of the past\nmillennium (e.g. In a DA system, the data provide climate information at the sites, and the model fills in\nthe missing information about the other locations by adding model dynamics and error bars\nfrom the data and the model ([26]). Data Availabilit y Statement: All relevant data are\nwithin the manuscript and its Support ing\ninformation files. They also draw the prior states from the separate\ntime slice simulation",
+      "random_answer": "DA has been recently applied to reconstruct, for instance, the climate of the past\nmillennium (e.g. In a DA system, the data provide climate information at the sites, and the model fills in\nthe missing information about the other locations by adding model dynamics and error bars\nfrom the data and the model ([26]). Data Availabilit y Statement: All relevant data are\nwithin the manuscript and its Support ing\ninformation files. Investigat ing the causes\nof the response of the thermoha line circulat",
+      "datter_score": 81.1,
+      "random_score": 41.7,
+      "missing_points": "Missing key terms: findings, state, transition"
+    }
+  ],
+  "pareto_points": [
+    {
+      "token_reduction_pct": 0.0,
+      "understanding_pct": 100.0,
+      "label": "Full corpus"
+    },
+    {
+      "token_reduction_pct": 21.0,
+      "understanding_pct": 100.0,
+      "label": "Cut 20% target"
+    },
+    {
+      "token_reduction_pct": 31.6,
+      "understanding_pct": 100.0,
+      "label": "Cut 30% target"
+    },
+    {
+      "token_reduction_pct": 40.3,
+      "understanding_pct": 100.0,
+      "label": "Cut 40% target"
+    },
+    {
+      "token_reduction_pct": 45.6,
+      "understanding_pct": 100.0,
+      "label": "Cut 45% target"
+    },
+    {
+      "token_reduction_pct": 50.8,
+      "understanding_pct": 100.0,
+      "label": "Cut 50% target"
+    },
+    {
+      "token_reduction_pct": 56.1,
+      "understanding_pct": 96.9,
+      "label": "Cut 55% target"
+    },
+    {
+      "token_reduction_pct": 61.2,
+      "understanding_pct": 91.6,
+      "label": "Cut 60% target"
+    },
+    {
+      "token_reduction_pct": 66.4,
+      "understanding_pct": 79.5,
+      "label": "Cut 65% target"
+    },
+    {
+      "token_reduction_pct": 61.2,
+      "understanding_pct": 91.6,
+      "label": "Max safe cut (Datter)"
+    },
+    {
+      "token_reduction_pct": 61.2,
+      "understanding_pct": 91.6,
+      "label": "Random at same budget"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "project_id": "social",
+  "project_name": "WHO social connection RAG",
+  "quality_floor": 0.9,
+  "api_mode": "offline",
+  "disclaimer": "Offline TF-IDF judge fallback \u2014 production claims require live multi-model run.",
+  "generated_at": "2026-06-25T19:57:44.474266+00:00",
+  "ladder_targets": [
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "steps": [
+    {
+      "target_reduction": 0.1,
+      "actual_reduction_pct": 10.0,
+      "tokens_full": 161321,
+      "tokens_compressed": 145115,
+      "tokens_saved": 16206,
+      "min_score": 93.5,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 93.5,
+        "opus": 93.5,
+        "sonnet": 93.5,
+        "composer": 93.5
+      }
+    },
+    {
+      "target_reduction": 0.15,
+      "actual_reduction_pct": 15.0,
+      "tokens_full": 161321,
+      "tokens_compressed": 137104,
+      "tokens_saved": 24217,
+      "min_score": 91.0,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 91.0,
+        "opus": 91.0,
+        "sonnet": 91.0,
+        "composer": 91.0
+      }
+    },
+    {
+      "target_reduction": 0.2,
+      "actual_reduction_pct": 20.0,
+      "tokens_full": 161321,
+      "tokens_compressed": 128982,
+      "tokens_saved": 32339,
+      "min_score": 85.7,
+      "passed": false,
+      "model_scores": {
+        "gpt55": 85.7,
+        "opus": 85.7,
+        "sonnet": 85.7,
+        "composer": 85.7
+      }
+    }
+  ],
+  "stopped_early": true,
+  "best_at_floor": {
+    "target_reduction": 0.15,
+    "actual_reduction_pct": 15.0,
+    "min_score": 91.0,
+    "tokens_full": 161321,
+    "tokens_compressed": 137104,
+    "tokens_saved": 24217
+  }
+}

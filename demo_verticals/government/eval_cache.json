@@ -1,0 +1,122 @@
+{
+  "mean_full_score": 100.0,
+  "mean_datter_score": 90.1,
+  "mean_random_score": 80.4,
+  "understanding_pct": 90.1,
+  "random_understanding_pct": 90.1,
+  "quality_floor": 0.9,
+  "target_reduction": 0.5,
+  "actual_reduction": 0.5001,
+  "max_safe_reduction_pct": 50.0,
+  "meets_quality_floor": true,
+  "disclaimer": "Building demo \u2014 offline understanding proxy (TF-IDF retrieval + token overlap). Production claims use developed eval harness.",
+  "questions": [
+    {
+      "question_id": "q1",
+      "query": "What is the purpose of Managing Public Money?",
+      "full_answer": "It may be that the nature of the body is such that it \nwould be appropriate to consider if that a requirement for compliance \nwith the principles of Managing Public Money should be imposed. Public corporations do not have accounting officers and are not subject \nto Managing Public Money as a matter of course. Unlike Public Corporations in \ngeneral, trading funds have accounting officers appointed by the \nTreasury and are subject to Managing Public Money. 8 \nChapter 1 \nResponsibilities \n \n \n1.1 M",
+      "datter_answer": "It may be that the nature of the body is such that it \nwould be appropriate to consider if that a requirement for compliance \nwith the principles of Managing Public Money should be imposed. Public corporations do not have accounting officers and are not subject \nto Managing Public Money as a matter of course. Unlike Public Corporations in \ngeneral, trading funds have accounting officers appointed by the \nTreasury and are subject to Managing Public Money. 8 \nChapter 1 \nResponsibilities \n \n \n1.1 M",
+      "random_answer": "It may be that the nature of the body is such that it \nwould be appropriate to consider if that a requirement for compliance \nwith the principles of Managing Public Money should be imposed. Public corporations do not have accounting officers and are not subject \nto Managing Public Money as a matter of course. Unlike Public Corporations in \ngeneral, trading funds have accounting officers appointed by the \nTreasury and are subject to Managing Public Money. The template framework document \nfor cent",
+      "datter_score": 79.6,
+      "random_score": 52.0,
+      "missing_points": "Missing key terms: accountability, guide, on"
+    },
+    {
+      "question_id": "q2",
+      "query": "Who is accountable for public spending decisions?",
+      "full_answer": "Departments may pay them \ngrants (for specific purposes) and grants-in-aid (non-specific support) to \nfinance their spending; though it is the net spending of the ALB that \nscores in the departmental budget. Each covers the net expenditure \nof a department and its ALBs (that is all spending in budgets and any \nvoted spend outside of budgets) for the year ahead. Where the expenditure covers multiple years \nwithin a spending review period, the Treasury expects accounting \nofficers to ensure budget",
+      "datter_answer": "Departments may pay them \ngrants (for specific purposes) and grants-in-aid (non-specific support) to \nfinance their spending; though it is the net spending of the ALB that \nscores in the departmental budget. Each covers the net expenditure \nof a department and its ALBs (that is all spending in budgets and any \nvoted spend outside of budgets) for the year ahead. Where the expenditure covers multiple years \nwithin a spending review period, the Treasury expects accounting \nofficers to ensure budget",
+      "random_answer": "Departments may pay them \ngrants (for specific purposes) and grants-in-aid (non-specific support) to \nfinance their spending; though it is the net spending of the ALB that \nscores in the departmental budget. Each covers the net expenditure \nof a department and its ALBs (that is all spending in budgets and any \nvoted spend outside of budgets) for the year ahead. Where the expenditure covers multiple years \nwithin a spending review period, the Treasury expects accounting \nofficers to ensure budget",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: ministers, permanent, secretaries"
+    },
+    {
+      "question_id": "q3",
+      "query": "What is value for money in public spending?",
+      "full_answer": "Departments may pay them \ngrants (for specific purposes) and grants-in-aid (non-specific support) to \nfinance their spending; though it is the net spending of the ALB that \nscores in the departmental budget. Each covers the net expenditure \nof a department and its ALBs (that is all spending in budgets and any \nvoted spend outside of budgets) for the year ahead. In general it is sensible to \nconsider arrangements for protecting the Exchequer interest through \nclawback of specific grants should th",
+      "datter_answer": "Departments may pay them \ngrants (for specific purposes) and grants-in-aid (non-specific support) to \nfinance their spending; though it is the net spending of the ALB that \nscores in the departmental budget. Each covers the net expenditure \nof a department and its ALBs (that is all spending in budgets and any \nvoted spend outside of budgets) for the year ahead. In general it is sensible to \nconsider arrangements for protecting the Exchequer interest through \nclawback of specific grants should th",
+      "random_answer": "Departments may pay them \ngrants (for specific purposes) and grants-in-aid (non-specific support) to \nfinance their spending; though it is the net spending of the ALB that \nscores in the departmental budget. Each covers the net expenditure \nof a department and its ALBs (that is all spending in budgets and any \nvoted spend outside of budgets) for the year ahead. In general it is sensible to \nconsider arrangements for protecting the Exchequer interest through \nclawback of specific grants should th",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: best, economy, effectiveness, efficiency"
+    },
+    {
+      "question_id": "q4",
+      "query": "What approvals are needed before committing public funds?",
+      "full_answer": "2.3.11 Where proposals have public expenditure implications, the \nTreasury should be consulted before they are submitted for approval by \ncollective agreement at cabinet level, either in person, by write-round \nor via a cabinet sub-committee. 2.3.10 The Treasury approval process may also include requirements to \nobtain approvals from other government departments or bodies in \nrelation to specific types of expenditure, for example Cabinet Office \ncommercial controls. Failure to obtain such approv",
+      "datter_answer": "Most trading funds are public corporations, but some may be \ncentral government companies. Unlike Public Corporations in \ngeneral, trading funds have accounting officers appointed by the \nTreasury and are subject to Managing Public Money. Public corporations do not have accounting officers and are not subject \nto Managing Public Money as a matter of course. Box 4.4 Essentials of systems for committing and \npaying funds \n\u25cf selection of projects after appraisal of the alternatives (see the \nGreen ",
+      "random_answer": "Most trading funds are public corporations, but some may be \ncentral government companies. Unlike Public Corporations in \ngeneral, trading funds have accounting officers appointed by the \nTreasury and are subject to Managing Public Money. Public corporations do not have accounting officers and are not subject \nto Managing Public Money as a matter of course. Box 4.4 Essentials of systems for committing and \npaying funds \n\u25cf selection of projects after appraisal of the alternatives (see the \nGreen ",
+      "datter_score": 60.9,
+      "random_score": 60.9,
+      "missing_points": "Missing key terms: approval, authority, delegation, limits, spending"
+    },
+    {
+      "question_id": "q5",
+      "query": "How should irregularities or fraud be handled?",
+      "full_answer": "168 \nA4.9.5 Each organisation shall identify and assess at different levels how \nit might be vulnerable to fraud with reference to the government \nstandards for Fraud Risk Assessment. Fraud should be always \nconsidered as a risk for the departments\u2019 risk register. The Fraud Act 2006 recognises that a criminal offence of fraud arises \nfrom causing a loss to an individual or legal entity through the \nintentional misdeclaration of information; knowingly withholding \ninformation; or through an abuse",
+      "datter_answer": "168 \nA4.9.5 Each organisation shall identify and assess at different levels how \nit might be vulnerable to fraud with reference to the government \nstandards for Fraud Risk Assessment. Fraud should be always \nconsidered as a risk for the departments\u2019 risk register. The Fraud Act 2006 recognises that a criminal offence of fraud arises \nfrom causing a loss to an individual or legal entity through the \nintentional misdeclaration of information; knowingly withholding \ninformation; or through an abuse",
+      "random_answer": "Fraud should be always \nconsidered as a risk for the departments\u2019 risk register. Responding to fraud risk \nA4.9.7 The organisation\u2019s response to fraud risk should be customised \nto the risks it faces. Typically it will involve some or all of the following: \n\u2022 Developing a Fraud Policy Statement, a Fraud Risk \nStrategy and a Fraud Response Plan (key documents that \nevery organisation should have). Assurances about these measures can \nbe obtained from Internal Audit fraud loss measurement exercise",
+      "datter_score": 100.0,
+      "random_score": 69.4,
+      "missing_points": "Missing key terms: investigate, irregularity, report"
+    },
+    {
+      "question_id": "q6",
+      "query": "What role do internal controls play in public finance?",
+      "full_answer": "Box A4.1A The role of the senior officer responsible for \nfinance  \nGovernance:  \n\u25cf financial leadership, both within the organisation and to its \nALBs, at both a strategic and operational level \n\u25cf ensuring sound and appropriate financial governance and \nfinancial risk management  \n\u25cf leading, motivating and developing the finance function, \nestablishing its full commercial contribution to the business \n\u25cf planning and delivering the financial framework agreed with \nthe Treasury or sponsoring orga",
+      "datter_answer": "Box A4.1A The role of the senior officer responsible for \nfinance  \nGovernance:  \n\u25cf financial leadership, both within the organisation and to its \nALBs, at both a strategic and operational level \n\u25cf ensuring sound and appropriate financial governance and \nfinancial risk management  \n\u25cf leading, motivating and developing the finance function, \nestablishing its full commercial contribution to the business \n\u25cf planning and delivering the financial framework agreed with \nthe Treasury or sponsoring orga",
+      "random_answer": "Box A4.1A The role of the senior officer responsible for \nfinance  \nGovernance:  \n\u25cf financial leadership, both within the organisation and to its \nALBs, at both a strategic and operational level \n\u25cf ensuring sound and appropriate financial governance and \nfinancial risk management  \n\u25cf leading, motivating and developing the finance function, \nestablishing its full commercial contribution to the business \n\u25cf planning and delivering the financial framework agreed with \nthe Treasury or sponsoring orga",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: control"
+    }
+  ],
+  "pareto_points": [
+    {
+      "token_reduction_pct": 0.0,
+      "understanding_pct": 100.0,
+      "label": "Full corpus"
+    },
+    {
+      "token_reduction_pct": 20.0,
+      "understanding_pct": 100.0,
+      "label": "Cut 20% target"
+    },
+    {
+      "token_reduction_pct": 30.1,
+      "understanding_pct": 96.6,
+      "label": "Cut 30% target"
+    },
+    {
+      "token_reduction_pct": 40.0,
+      "understanding_pct": 90.1,
+      "label": "Cut 40% target"
+    },
+    {
+      "token_reduction_pct": 45.0,
+      "understanding_pct": 90.1,
+      "label": "Cut 45% target"
+    },
+    {
+      "token_reduction_pct": 50.0,
+      "understanding_pct": 90.1,
+      "label": "Cut 50% target"
+    },
+    {
+      "token_reduction_pct": 55.0,
+      "understanding_pct": 85.7,
+      "label": "Cut 55% target"
+    },
+    {
+      "token_reduction_pct": 50.0,
+      "understanding_pct": 90.1,
+      "label": "Max safe cut (Datter)"
+    },
+    {
+      "token_reduction_pct": 50.0,
+      "understanding_pct": 90.1,
+      "label": "Random at same budget"
+    }
+  ]
+}

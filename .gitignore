@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+models/adisorn/*
+!models/adisorn/README.md
+!models/adisorn/.gitkeep
+.DS_Store

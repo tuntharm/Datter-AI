@@ -1,0 +1,97 @@
+{
+  "mean_full_score": 100.0,
+  "mean_datter_score": 85.9,
+  "mean_random_score": 85.9,
+  "understanding_pct": 85.9,
+  "random_understanding_pct": 85.9,
+  "quality_floor": 0.9,
+  "target_reduction": 0.5,
+  "actual_reduction": 0.4088,
+  "max_safe_reduction_pct": 40.9,
+  "meets_quality_floor": false,
+  "disclaimer": "Building demo \u2014 offline understanding proxy (TF-IDF retrieval + token overlap). Production claims use developed eval harness.",
+  "questions": [
+    {
+      "question_id": "q1",
+      "query": "What are the key research findings in the unique note?",
+      "full_answer": "The model maps boundary conditions and forcing histories to displacement fields with 40x speedup over explicit Newmark integration at comparable L2 error (< 2% on held-out load speeds). Key contributions:\n- Physics-informed loss combining PDE residual and data fidelity\n- Extrapolation to unseen load velocities without retraining\n- Deployment on edge hardware for structural health monitoring\n\nExperimental setup: 12m simply supported steel I-beam, 500 training trajectories, 100 validation trajecto",
+      "datter_answer": "Let's take this offline and loop in the team. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. We need to circle back and touch base on the roadmap. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisatio",
+      "random_answer": "Let's take this offline and loop in the team. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. We need to circle back and touch base on the roadmap. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisatio",
+      "datter_score": 15.3,
+      "random_score": 15.3,
+      "missing_points": "Missing key terms: content, findings, research, unique"
+    },
+    {
+      "question_id": "q2",
+      "query": "What policy requirements are documented?",
+      "full_answer": "# Corporate Data Retention Policy\n\nAll rights reserved. This policy may be updated without notice. Confidential \u2014 do not distribute. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin.",
+      "datter_answer": "# Corporate Data Retention Policy\n\nAll rights reserved. This policy may be updated without notice. Confidential \u2014 do not distribute. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin.",
+      "random_answer": "# Corporate Data Retention Policy\n\nAll rights reserved. This policy may be updated without notice. Confidential \u2014 do not distribute. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin.",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: compliance, requirements"
+    },
+    {
+      "question_id": "q3",
+      "query": "What technical specifications are defined?",
+      "full_answer": "Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. # Corporate Data Retention Policy\n\nAll rights reserved. Confidential \u2014 do not distribute. This document describes the standard terms and conditions for ",
+      "datter_answer": "Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. # Corporate Data Retention Policy\n\nAll rights reserved. Confidential \u2014 do not distribute. This document describes the standard terms and conditions for ",
+      "random_answer": "Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. # Corporate Data Retention Policy\n\nAll rights reserved. Confidential \u2014 do not distribute. This document describes the standard terms and conditions for ",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: requirements"
+    },
+    {
+      "question_id": "q4",
+      "query": "Are there duplicate documents in this corpus?",
+      "full_answer": "Let's take this offline and loop in the team. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisation. This policy may be upda",
+      "datter_answer": "Let's take this offline and loop in the team. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisation. This policy may be upda",
+      "random_answer": "Let's take this offline and loop in the team. Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisation. This policy may be upda",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: duplicate, exact, near"
+    },
+    {
+      "question_id": "q5",
+      "query": "What low-signal content should be excluded?",
+      "full_answer": "Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This policy may be updated without notice. # Corporate Data Retention Policy\n\nAll rights reserved. Confidential \u2014 do not distribute.",
+      "datter_answer": "Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This policy may be updated without notice. # Corporate Data Retention Policy\n\nAll rights reserved. Confidential \u2014 do not distribute.",
+      "random_answer": "Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. No action required for now. Action items: TBD. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This policy may be updated without notice. # Corporate Data Retention Policy\n\nAll rights reserved. Confidential \u2014 do not distribute.",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: boilerplate, low, signal"
+    },
+    {
+      "question_id": "q6",
+      "query": "Which chunks have the highest information density?",
+      "full_answer": "Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. We need to circle back and touch base on the roadmap. Let's take this offline and loop in the team. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisatio",
+      "datter_answer": "Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. We need to circle back and touch base on the roadmap. Let's take this offline and loop in the team. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisatio",
+      "random_answer": "Meeting notes \u2014 weekly sync\n\nAs discussed, we should follow up on the thing from last week. We need to circle back and touch base on the roadmap. Let's take this offline and loop in the team. Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. This document describes the standard terms and conditions for data retention within the organisatio",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: content, density, information, useful"
+    }
+  ],
+  "pareto_points": [
+    {
+      "token_reduction_pct": 0.0,
+      "understanding_pct": 100.0,
+      "label": "Full corpus"
+    },
+    {
+      "token_reduction_pct": 40.9,
+      "understanding_pct": 85.9,
+      "label": "Cut 20% target"
+    },
+    {
+      "token_reduction_pct": 40.9,
+      "understanding_pct": 85.9,
+      "label": "Max safe cut (Datter)"
+    },
+    {
+      "token_reduction_pct": 40.9,
+      "understanding_pct": 85.9,
+      "label": "Random at same budget"
+    }
+  ]
+}

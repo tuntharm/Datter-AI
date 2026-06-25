@@ -1,0 +1,117 @@
+{
+  "mean_full_score": 100.0,
+  "mean_datter_score": 96.1,
+  "mean_random_score": 79.0,
+  "understanding_pct": 96.1,
+  "random_understanding_pct": 96.1,
+  "quality_floor": 0.9,
+  "target_reduction": 0.5,
+  "actual_reduction": 0.4526,
+  "max_safe_reduction_pct": 45.3,
+  "meets_quality_floor": true,
+  "disclaimer": "Building demo \u2014 offline understanding proxy (TF-IDF retrieval + token overlap). Production claims use developed eval harness.",
+  "questions": [
+    {
+      "question_id": "q1",
+      "query": "What are steel special moment frames used for?",
+      "full_answer": "Contents\nHow to Cite This Publication\n1\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\nStructural steel special moment frames are commonly \nused as part of the seismic force-resisting systems in \nbuildings designed to resist severe ground shaking and \nare permitted by ASCE/SEI 7-16, Minimum Design \nLoads and Associated Criteria for Buildings and \nOther Structures  (ASCE 2016), referred to hereafter \nas ASCE 7, for any Seismic Design Category witho",
+      "datter_answer": "Contents\nHow to Cite This Publication\n1\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\nStructural steel special moment frames are commonly \nused as part of the seismic force-resisting systems in \nbuildings designed to resist severe ground shaking and \nare permitted by ASCE/SEI 7-16, Minimum Design \nLoads and Associated Criteria for Buildings and \nOther Structures  (ASCE 2016), referred to hereafter \nas ASCE 7, for any Seismic Design Category witho",
+      "random_answer": "Contents\nHow to Cite This Publication\n1\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\nStructural steel special moment frames are commonly \nused as part of the seismic force-resisting systems in \nbuildings designed to resist severe ground shaking and \nare permitted by ASCE/SEI 7-16, Minimum Design \nLoads and Associated Criteria for Buildings and \nOther Structures  (ASCE 2016), referred to hereafter \nas ASCE 7, for any Seismic Design Category witho",
+      "datter_score": 100.0,
+      "random_score": 76.1,
+      "missing_points": "Missing key terms: system"
+    },
+    {
+      "question_id": "q2",
+      "query": "What is the purpose of seismic design requirements for SMFs?",
+      "full_answer": "Introduction  ..............................................................................................1\nThe Use of Special Moment Frames................................................................3\nPrinciples for Steel Special Moment Frame Design.........................................10\nAnalysis Guidance...................................................................................19\nDesign Guidance..................................................................................",
+      "datter_answer": "Introduction  ..............................................................................................1\nThe Use of Special Moment Frames................................................................3\nPrinciples for Steel Special Moment Frame Design.........................................10\nAnalysis Guidance...................................................................................19\nDesign Guidance..................................................................................",
+      "random_answer": "Moment frames not specifically detailed for seismic \nresistance have no special detailing criteria and need \ncomply only with the strength and drift limits of ASCE 7 \nand the design requirements of AISC 360. Because gravity load-carrying \ncolumns in steel special moment frame structures can \nexperience substantial lateral deformations and related \nseismic forces, AISC 341 specifies the required strength \nof splices in the columns of gravity-resisting frames as \nSeismic Design of Steel Special Mo",
+      "datter_score": 100.0,
+      "random_score": 58.3,
+      "missing_points": "Missing key terms: dissipation, ductility, earthquake, energy"
+    },
+    {
+      "question_id": "q3",
+      "query": "What is interstory drift and why does it matter?",
+      "full_answer": "Regardless of whether Allowable Strength Design or \nLoad and Resistance Factor Design procedures are used \nto evaluate strength, drift is calculated using strength-\nlevel seismic forces, factored by the ASCE 7 deflection \namplification coefficient, Cd. In some buildings, \nit may be desirable to limit design seismic drift to reduce \ndamage of cladding, stairs, and other nonstructural \nelements that span vertically from one level to another. ASCE 7 does not specify \ndrift limits for wind loads; ho",
+      "datter_answer": "Regardless of whether Allowable Strength Design or \nLoad and Resistance Factor Design procedures are used \nto evaluate strength, drift is calculated using strength-\nlevel seismic forces, factored by the ASCE 7 deflection \namplification coefficient, Cd. In some buildings, \nit may be desirable to limit design seismic drift to reduce \ndamage of cladding, stairs, and other nonstructural \nelements that span vertically from one level to another. ASCE 7 does not specify \ndrift limits for wind loads; ho",
+      "random_answer": "The total story drift is the sum of shear and flexural \nmode drifts. It is not uncommon for the story stability coefficient to \nexceed 0.1, particularly in regions in which the design \nspectral values, SDS and SD1, are relatively small. It is also \ncommon in such cases that the \u03b8max criterion controls and \nP-D considerations will require an increase in member \nstiffness. 3.5  Connection Type Selection\nSince the 1994 Northridge earthquake, AISC 341 has \nrequired that detailing and design of steel",
+      "datter_score": 100.0,
+      "random_score": 66.2,
+      "missing_points": "Missing key terms: displacement"
+    },
+    {
+      "question_id": "q4",
+      "query": "How are beam-column connections designed for seismic loads?",
+      "full_answer": "Brace\nHorizontal strutFloor framing\nMoment \nframe \nbeam\n23\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\nto prevent rotation out of the plane of the moment \nframe, particularly if inelastic behavior is expected \nin or adjacent to a beam-column connection. For example, \nthe unbraced column segment must be designed using the \ndistance between adjacent lateral braces as the column \nheight for buckling transverse to the plane of the frame, \nand the c",
+      "datter_answer": "Brace\nHorizontal strutFloor framing\nMoment \nframe \nbeam\n23\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\nto prevent rotation out of the plane of the moment \nframe, particularly if inelastic behavior is expected \nin or adjacent to a beam-column connection. For example, \nthe unbraced column segment must be designed using the \ndistance between adjacent lateral braces as the column \nheight for buckling transverse to the plane of the frame, \nand the c",
+      "random_answer": "Brace\nHorizontal strutFloor framing\nMoment \nframe \nbeam\n23\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\nto prevent rotation out of the plane of the moment \nframe, particularly if inelastic behavior is expected \nin or adjacent to a beam-column connection. For example, \nthe unbraced column segment must be designed using the \ndistance between adjacent lateral braces as the column \nheight for buckling transverse to the plane of the frame, \nand the c",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: bolt, weld"
+    },
+    {
+      "question_id": "q5",
+      "query": "What role does ductility play in seismic performance?",
+      "full_answer": "Although the section limitations for moderately ductile \nmembers are similar to those for some sections defined as \ncompact in AISC 360, they are not identical and in some \ncases are much more severe because of the cyclic nature of \nseismic loading. Generally, the design \nof steel special moment frame column bases should be \nstrong enough so that inelastic deformation is limited \nto a region that can exhibit significant ductility, such \nas the column member just above the base connection. Anothe",
+      "datter_answer": "Although the section limitations for moderately ductile \nmembers are similar to those for some sections defined as \ncompact in AISC 360, they are not identical and in some \ncases are much more severe because of the cyclic nature of \nseismic loading. Generally, the design \nof steel special moment frame column bases should be \nstrong enough so that inelastic deformation is limited \nto a region that can exhibit significant ductility, such \nas the column member just above the base connection. Anothe",
+      "random_answer": "Although the section limitations for moderately ductile \nmembers are similar to those for some sections defined as \ncompact in AISC 360, they are not identical and in some \ncases are much more severe because of the cyclic nature of \nseismic loading. Generally, the design \nof steel special moment frame column bases should be \nstrong enough so that inelastic deformation is limited \nto a region that can exhibit significant ductility, such \nas the column member just above the base connection. Anothe",
+      "datter_score": 76.9,
+      "random_score": 73.5,
+      "missing_points": "Missing key terms: earthquake"
+    },
+    {
+      "question_id": "q6",
+      "query": "What analysis methods are recommended for SMF design?",
+      "full_answer": "ELF analysis is the simplest procedure \npermitted for use in steel moment design, but will not \nadequately capture higher mode effects when these are \nsignificant nor will it account for the effects of some \nirregularities. 19\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\n4.1  Analysis Procedure \nASCE 7 \u00a712.6 permits five different analysis procedures \nto determine required member strengths and design \ndrifts: (1) equivalent lateral force, (2) a ",
+      "datter_answer": "ELF analysis is the simplest procedure \npermitted for use in steel moment design, but will not \nadequately capture higher mode effects when these are \nsignificant nor will it account for the effects of some \nirregularities. 19\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\n4.1  Analysis Procedure \nASCE 7 \u00a712.6 permits five different analysis procedures \nto determine required member strengths and design \ndrifts: (1) equivalent lateral force, (2) a ",
+      "random_answer": "ELF analysis is the simplest procedure \npermitted for use in steel moment design, but will not \nadequately capture higher mode effects when these are \nsignificant nor will it account for the effects of some \nirregularities. 19\nSeismic Design of Steel Special Moment Frames: A Guide for Practicing Engineers, Second Edition\n4.1  Analysis Procedure \nASCE 7 \u00a712.6 permits five different analysis procedures \nto determine required member strengths and design \ndrifts: (1) equivalent lateral force, (2) a ",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: static"
+    }
+  ],
+  "pareto_points": [
+    {
+      "token_reduction_pct": 0.0,
+      "understanding_pct": 100.0,
+      "label": "Full corpus"
+    },
+    {
+      "token_reduction_pct": 20.3,
+      "understanding_pct": 100.0,
+      "label": "Cut 20% target"
+    },
+    {
+      "token_reduction_pct": 30.5,
+      "understanding_pct": 96.1,
+      "label": "Cut 30% target"
+    },
+    {
+      "token_reduction_pct": 40.0,
+      "understanding_pct": 96.1,
+      "label": "Cut 40% target"
+    },
+    {
+      "token_reduction_pct": 45.3,
+      "understanding_pct": 96.1,
+      "label": "Cut 45% target"
+    },
+    {
+      "token_reduction_pct": 50.0,
+      "understanding_pct": 87.5,
+      "label": "Cut 50% target"
+    },
+    {
+      "token_reduction_pct": 45.3,
+      "understanding_pct": 96.1,
+      "label": "Max safe cut (Datter)"
+    },
+    {
+      "token_reduction_pct": 45.3,
+      "understanding_pct": 96.1,
+      "label": "Random at same budget"
+    }
+  ]
+}

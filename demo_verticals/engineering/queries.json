@@ -1,0 +1,13 @@
+{
+  "task_description": "Answer seismic design questions for structural engineers using NIST steel moment frame guidance.",
+  "quality_floor": 0.90,
+  "target_token_reduction": 0.50,
+  "questions": [
+    {"id": "q1", "query": "What are steel special moment frames used for?", "gold_hint": "seismic design lateral force resisting system"},
+    {"id": "q2", "query": "What is the purpose of seismic design requirements for SMFs?", "gold_hint": "earthquake ductility energy dissipation"},
+    {"id": "q3", "query": "What is interstory drift and why does it matter?", "gold_hint": "drift story displacement seismic"},
+    {"id": "q4", "query": "How are beam-column connections designed for seismic loads?", "gold_hint": "connection moment frame weld bolt"},
+    {"id": "q5", "query": "What role does ductility play in seismic performance?", "gold_hint": "ductility inelastic deformation earthquake"},
+    {"id": "q6", "query": "What analysis methods are recommended for SMF design?", "gold_hint": "analysis nonlinear static dynamic"}
+  ]
+}

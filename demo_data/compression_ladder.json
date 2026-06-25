@@ -1,0 +1,44 @@
+{
+  "project_id": "lab",
+  "project_name": "Structural audit lab",
+  "quality_floor": 0.9,
+  "api_mode": "offline",
+  "disclaimer": "Offline TF-IDF judge fallback \u2014 production claims require live multi-model run.",
+  "generated_at": "2026-06-25T19:57:21.745703+00:00",
+  "ladder_targets": [
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "steps": [
+    {
+      "target_reduction": 0.1,
+      "actual_reduction_pct": 96.0,
+      "tokens_full": 10127,
+      "tokens_compressed": 405,
+      "tokens_saved": 9722,
+      "min_score": 45.4,
+      "passed": false,
+      "model_scores": {
+        "gpt55": 45.4,
+        "opus": 45.4,
+        "sonnet": 45.4,
+        "composer": 45.4
+      }
+    }
+  ],
+  "stopped_early": true,
+  "best_at_floor": {
+    "target_reduction": 0.1,
+    "actual_reduction_pct": 96.0,
+    "min_score": 45.4,
+    "tokens_full": 10127,
+    "tokens_compressed": 405,
+    "tokens_saved": 9722
+  }
+}

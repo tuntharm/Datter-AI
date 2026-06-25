@@ -1,0 +1,13 @@
+{
+  "task_description": "Answer questions about social connection and health policy for a WHO knowledge assistant.",
+  "quality_floor": 0.90,
+  "target_token_reduction": 0.50,
+  "questions": [
+    {"id": "q1", "query": "Why is social connection important for health?", "gold_hint": "social connection health wellbeing mortality"},
+    {"id": "q2", "query": "What is social isolation and how does it affect people?", "gold_hint": "isolation loneliness health outcomes"},
+    {"id": "q3", "query": "Which populations are most at risk of social disconnection?", "gold_hint": "elderly vulnerable marginalized groups"},
+    {"id": "q4", "query": "What interventions can strengthen social connection?", "gold_hint": "community programs policy interventions"},
+    {"id": "q5", "query": "How should governments address social connection?", "gold_hint": "policy public health government action"},
+    {"id": "q6", "query": "What is the link between social connection and mental health?", "gold_hint": "mental health depression anxiety social support"}
+  ]
+}

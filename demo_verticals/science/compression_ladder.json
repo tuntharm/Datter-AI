@@ -1,0 +1,73 @@
+{
+  "project_id": "science",
+  "pdf": "plos_climber_x_paleoclimate.pdf",
+  "quality_floor": 0.9,
+  "api_mode": "offline",
+  "disclaimer": "Building demo \u2014 offline understanding proxy (TF-IDF retrieval + token overlap). Production claims use developed eval harness.",
+  "ladder": [
+    {
+      "target_reduction": 0.1,
+      "actual_reduction_pct": 10.4,
+      "tokens_full": 22103,
+      "tokens_compressed": 19796,
+      "tokens_saved": 2307,
+      "min_score": 100.0,
+      "mean_score": 100.0,
+      "passed": true
+    },
+    {
+      "target_reduction": 0.15,
+      "actual_reduction_pct": 15.7,
+      "tokens_full": 22103,
+      "tokens_compressed": 18643,
+      "tokens_saved": 3460,
+      "min_score": 93.4,
+      "mean_score": 93.4,
+      "passed": true
+    },
+    {
+      "target_reduction": 0.2,
+      "actual_reduction_pct": 21.0,
+      "tokens_full": 22103,
+      "tokens_compressed": 17472,
+      "tokens_saved": 4631,
+      "min_score": 93.4,
+      "mean_score": 93.4,
+      "passed": true
+    },
+    {
+      "target_reduction": 0.3,
+      "actual_reduction_pct": 31.6,
+      "tokens_full": 22103,
+      "tokens_compressed": 15119,
+      "tokens_saved": 6984,
+      "min_score": 93.4,
+      "mean_score": 93.4,
+      "passed": true
+    },
+    {
+      "target_reduction": 0.4,
+      "actual_reduction_pct": 40.3,
+      "tokens_full": 22103,
+      "tokens_compressed": 13193,
+      "tokens_saved": 8910,
+      "min_score": 94.4,
+      "mean_score": 94.4,
+      "passed": true
+    },
+    {
+      "target_reduction": 0.5,
+      "actual_reduction_pct": 50.8,
+      "tokens_full": 22103,
+      "tokens_compressed": 10884,
+      "tokens_saved": 11219,
+      "min_score": 81.8,
+      "mean_score": 81.8,
+      "passed": false
+    }
+  ],
+  "max_safe_compression_pct": 40.3,
+  "max_safe_target_reduction": 0.4,
+  "tokens_saved_at_max_safe": 8910,
+  "stopped_early": true
+}

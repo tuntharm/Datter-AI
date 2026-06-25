@@ -1,0 +1,108 @@
+{
+  "project_id": "engineering",
+  "pdf": "nist_seismic_smf_guide.pdf",
+  "quality_floor": 0.9,
+  "api_mode": "offline",
+  "disclaimer": "Paper Summary Team offline TF-IDF judge fallback",
+  "ladder": [
+    {
+      "target_reduction": 0.1,
+      "actual_reduction_pct": 10.4,
+      "tokens_full": 34811,
+      "tokens_compressed": 31178,
+      "tokens_saved": 3633,
+      "min_score": 100.0,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 100.0,
+        "opus": 100.0,
+        "sonnet": 100.0,
+        "composer": 100.0
+      }
+    },
+    {
+      "target_reduction": 0.15,
+      "actual_reduction_pct": 15.1,
+      "tokens_full": 34811,
+      "tokens_compressed": 29565,
+      "tokens_saved": 5246,
+      "min_score": 100.0,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 100.0,
+        "opus": 100.0,
+        "sonnet": 100.0,
+        "composer": 100.0
+      }
+    },
+    {
+      "target_reduction": 0.2,
+      "actual_reduction_pct": 20.3,
+      "tokens_full": 34811,
+      "tokens_compressed": 27760,
+      "tokens_saved": 7051,
+      "min_score": 100.0,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 100.0,
+        "opus": 100.0,
+        "sonnet": 100.0,
+        "composer": 100.0
+      }
+    },
+    {
+      "target_reduction": 0.3,
+      "actual_reduction_pct": 30.5,
+      "tokens_full": 34811,
+      "tokens_compressed": 24195,
+      "tokens_saved": 10616,
+      "min_score": 96.1,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 96.1,
+        "opus": 96.1,
+        "sonnet": 96.1,
+        "composer": 96.1
+      }
+    },
+    {
+      "target_reduction": 0.4,
+      "actual_reduction_pct": 40.0,
+      "tokens_full": 34811,
+      "tokens_compressed": 20875,
+      "tokens_saved": 13936,
+      "min_score": 96.1,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 96.1,
+        "opus": 96.1,
+        "sonnet": 96.1,
+        "composer": 96.1
+      }
+    },
+    {
+      "target_reduction": 0.5,
+      "actual_reduction_pct": 50.0,
+      "tokens_full": 34811,
+      "tokens_compressed": 17402,
+      "tokens_saved": 17409,
+      "min_score": 82.7,
+      "passed": false,
+      "model_scores": {
+        "gpt55": 82.7,
+        "opus": 82.7,
+        "sonnet": 82.7,
+        "composer": 82.7
+      }
+    }
+  ],
+  "max_safe_compression": {
+    "target_reduction": 0.4,
+    "actual_reduction_pct": 40.0,
+    "min_score": 96.1,
+    "tokens_full": 34811,
+    "tokens_compressed": 20875,
+    "tokens_saved": 13936
+  },
+  "stopped_at_target": 0.5
+}

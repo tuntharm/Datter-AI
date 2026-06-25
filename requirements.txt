@@ -1,0 +1,7 @@
+streamlit>=1.32
+tiktoken>=0.7
+pypdf>=4.0
+scikit-learn>=1.4
+pandas>=2.0
+numpy>=1.26
+pytest>=8.0

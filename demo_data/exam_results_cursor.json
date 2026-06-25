@@ -1,0 +1,194 @@
+{
+  "project_id": "lab",
+  "quality_floor": 0.5,
+  "iterations_run": 1,
+  "passed": false,
+  "compression_pct": 94.1,
+  "min_score_across_models": 44.1,
+  "tokens_full": 17175,
+  "tokens_compressed": 1016,
+  "model_results": [
+    {
+      "model_family": "gpt55",
+      "api_id": "gpt-5.5-medium",
+      "mean_score": 44.1,
+      "questions": [
+        {
+          "question_id": "q1",
+          "query": "What are the key research findings in the unique note?",
+          "reference_answer": "```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the u",
+          "candidate_answer": "Q1 (unique research findings) cannot be answered from compressed corpus. **Keep canonical chunks** even when redundancy is high \u2014 adjust `recommend_action()` in `baseline.py` so `is_canonical` bypasses the `redundancy \u2265 0.92` drop rule. unique note for q1) above drop threshold. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). # Compression ladder \u2014 lab project\n\n**Run:** 2026-06-25 \u00b7 **Quality floor:** 90% \u00b7 **Judge:** offl",
+          "score": 54.5,
+          "missing": "Missing key terms: content"
+        },
+        {
+          "question_id": "q2",
+          "query": "What policy requirements are documented?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q2 (2/4)\n\n**Query:** What policy requirements are documented? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** What policy requirements are documented? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek whe",
+          "candidate_answer": "# Corporate Data Retention Policy\n\nAll rights reserved. This policy may be updated without notice. Confidential \u2014 do not distribute. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they po",
+          "score": 50.0,
+          "missing": "Missing key terms: compliance, requirements"
+        },
+        {
+          "question_id": "q3",
+          "query": "What technical specifications are defined?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q2 (2/4)\n\n**Query:** What policy requirements are \u2026\n\n**Your \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q3 (3/4)\n\n**Query:** What technical specifications are defined? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q1 (1/4)\n\n**Query:** What are the k",
+          "candidate_answer": "Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md",
+          "score": 37.1,
+          "missing": "Missing key terms: requirements"
+        },
+        {
+          "question_id": "q4",
+          "query": "Are there duplicate documents in this corpus?",
+          "reference_answer": "**R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answeri\u2026\n\n**Your answer (COMPRESSED only):** **Query:** Are there duplicate documents in this corpus? **R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** A",
+          "candidate_answer": "**Offline judge ceiling:** TF-IDF overlap judge scores ~86% max on this corpus even at minimum compression; live multi-model judge needed for production floor checks. Q1 (unique research findings) cannot be answered from compressed corpus. **Selection skips all `drop` chunks:** Minimum compression on demo corpus is ~41%, not the 10\u201320% ladder start the experiment intended. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). #",
+          "score": 34.8,
+          "missing": "Missing key terms: duplicate, exact, near"
+        }
+      ],
+      "tokens_full": 10437,
+      "tokens_compressed": 727,
+      "passed": false
+    },
+    {
+      "model_family": "opus",
+      "api_id": "claude-opus-4-8-thinking-high",
+      "mean_score": 44.1,
+      "questions": [
+        {
+          "question_id": "q1",
+          "query": "What are the key research findings in the unique note?",
+          "reference_answer": "```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the u",
+          "candidate_answer": "Q1 (unique research findings) cannot be answered from compressed corpus. **Keep canonical chunks** even when redundancy is high \u2014 adjust `recommend_action()` in `baseline.py` so `is_canonical` bypasses the `redundancy \u2265 0.92` drop rule. unique note for q1) above drop threshold. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). # Compression ladder \u2014 lab project\n\n**Run:** 2026-06-25 \u00b7 **Quality floor:** 90% \u00b7 **Judge:** offl",
+          "score": 54.5,
+          "missing": "Missing key terms: content"
+        },
+        {
+          "question_id": "q2",
+          "query": "What policy requirements are documented?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q2 (2/4)\n\n**Query:** What policy requirements are documented? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** What policy requirements are documented? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek whe",
+          "candidate_answer": "# Corporate Data Retention Policy\n\nAll rights reserved. This policy may be updated without notice. Confidential \u2014 do not distribute. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they po",
+          "score": 50.0,
+          "missing": "Missing key terms: compliance, requirements"
+        },
+        {
+          "question_id": "q3",
+          "query": "What technical specifications are defined?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q2 (2/4)\n\n**Query:** What policy requirements are \u2026\n\n**Your \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q3 (3/4)\n\n**Query:** What technical specifications are defined? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q1 (1/4)\n\n**Query:** What are the k",
+          "candidate_answer": "Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md",
+          "score": 37.1,
+          "missing": "Missing key terms: requirements"
+        },
+        {
+          "question_id": "q4",
+          "query": "Are there duplicate documents in this corpus?",
+          "reference_answer": "**R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answeri\u2026\n\n**Your answer (COMPRESSED only):** **Query:** Are there duplicate documents in this corpus? **R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** A",
+          "candidate_answer": "**Offline judge ceiling:** TF-IDF overlap judge scores ~86% max on this corpus even at minimum compression; live multi-model judge needed for production floor checks. Q1 (unique research findings) cannot be answered from compressed corpus. **Selection skips all `drop` chunks:** Minimum compression on demo corpus is ~41%, not the 10\u201320% ladder start the experiment intended. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). #",
+          "score": 34.8,
+          "missing": "Missing key terms: duplicate, exact, near"
+        }
+      ],
+      "tokens_full": 10437,
+      "tokens_compressed": 727,
+      "passed": false
+    },
+    {
+      "model_family": "sonnet",
+      "api_id": "claude-4.6-sonnet-medium-thinking",
+      "mean_score": 44.1,
+      "questions": [
+        {
+          "question_id": "q1",
+          "query": "What are the key research findings in the unique note?",
+          "reference_answer": "```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the u",
+          "candidate_answer": "Q1 (unique research findings) cannot be answered from compressed corpus. **Keep canonical chunks** even when redundancy is high \u2014 adjust `recommend_action()` in `baseline.py` so `is_canonical` bypasses the `redundancy \u2265 0.92` drop rule. unique note for q1) above drop threshold. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). # Compression ladder \u2014 lab project\n\n**Run:** 2026-06-25 \u00b7 **Quality floor:** 90% \u00b7 **Judge:** offl",
+          "score": 54.5,
+          "missing": "Missing key terms: content"
+        },
+        {
+          "question_id": "q2",
+          "query": "What policy requirements are documented?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q2 (2/4)\n\n**Query:** What policy requirements are documented? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** What policy requirements are documented? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek whe",
+          "candidate_answer": "# Corporate Data Retention Policy\n\nAll rights reserved. This policy may be updated without notice. Confidential \u2014 do not distribute. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they po",
+          "score": 50.0,
+          "missing": "Missing key terms: compliance, requirements"
+        },
+        {
+          "question_id": "q3",
+          "query": "What technical specifications are defined?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q2 (2/4)\n\n**Query:** What policy requirements are \u2026\n\n**Your \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q3 (3/4)\n\n**Query:** What technical specifications are defined? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q1 (1/4)\n\n**Query:** What are the k",
+          "candidate_answer": "Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md",
+          "score": 37.1,
+          "missing": "Missing key terms: requirements"
+        },
+        {
+          "question_id": "q4",
+          "query": "Are there duplicate documents in this corpus?",
+          "reference_answer": "**R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answeri\u2026\n\n**Your answer (COMPRESSED only):** **Query:** Are there duplicate documents in this corpus? **R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** A",
+          "candidate_answer": "**Offline judge ceiling:** TF-IDF overlap judge scores ~86% max on this corpus even at minimum compression; live multi-model judge needed for production floor checks. Q1 (unique research findings) cannot be answered from compressed corpus. **Selection skips all `drop` chunks:** Minimum compression on demo corpus is ~41%, not the 10\u201320% ladder start the experiment intended. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). #",
+          "score": 34.8,
+          "missing": "Missing key terms: duplicate, exact, near"
+        }
+      ],
+      "tokens_full": 10437,
+      "tokens_compressed": 727,
+      "passed": false
+    },
+    {
+      "model_family": "composer",
+      "api_id": "composer-2.5-fast",
+      "mean_score": 44.1,
+      "questions": [
+        {
+          "question_id": "q1",
+          "query": "What are the key research findings in the unique note?",
+          "reference_answer": "```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the u",
+          "candidate_answer": "Q1 (unique research findings) cannot be answered from compressed corpus. **Keep canonical chunks** even when redundancy is high \u2014 adjust `recommend_action()` in `baseline.py` so `is_canonical` bypasses the `redundancy \u2265 0.92` drop rule. unique note for q1) above drop threshold. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). # Compression ladder \u2014 lab project\n\n**Run:** 2026-06-25 \u00b7 **Quality floor:** 90% \u00b7 **Judge:** offl",
+          "score": 54.5,
+          "missing": "Missing key terms: content"
+        },
+        {
+          "question_id": "q2",
+          "query": "What policy requirements are documented?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q2 (2/4)\n\n**Query:** What policy requirements are documented? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** What policy requirements are documented? ```\n\n## Questions\n\n### q1 (1/4)\n\n**Query:** What are the key research findings in the unique note? **Reference (FULL corpus \u2014 do not peek whe",
+          "candidate_answer": "# Corporate Data Retention Policy\n\nAll rights reserved. This policy may be updated without notice. Confidential \u2014 do not distribute. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they po",
+          "score": 50.0,
+          "missing": "Missing key terms: compliance, requirements"
+        },
+        {
+          "question_id": "q3",
+          "query": "What technical specifications are defined?",
+          "reference_answer": "**Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q2 (2/4)\n\n**Query:** What policy requirements are \u2026\n\n**Your \u2026\n\n**Your answer (COMPRESSED only):**\n\n### q3 (3/4)\n\n**Query:** What technical specifications are defined? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answering):** ### q1 (1/4)\n\n**Query:** What are the k",
+          "candidate_answer": "Datter Demo: Dense Technical Specification\nFNO: 4 Fourier layers, width 64, modes 16. Loss = L_data + 0.1*L_PDE + 0.05*L_bc\nTraining: AdamW 1e-3, batch 32, 200 epochs. Inference: 3.2ms/A100, 18ms Jetson Orin. 1. **Baseline scorer drops canonical duplicates:** `01_unique_research_note.md` is `is_canonical=True` but gets `recommended_action=drop` because `redundancy \u2265 0.92` fires before the canonical guard. Q1 (unique research findings) cannot be answered from compressed corpus. `exam_prompts/*.md",
+          "score": 37.1,
+          "missing": "Missing key terms: requirements"
+        },
+        {
+          "question_id": "q4",
+          "query": "Are there duplicate documents in this corpus?",
+          "reference_answer": "**R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Query:** Are there duplicate documents in this corpus? **Reference (FULL corpus \u2014 do not peek when answering):** **Reference (FULL corpus \u2014 do not peek when answeri\u2026\n\n**Your answer (COMPRESSED only):** **Query:** Are there duplicate documents in this corpus? **R\u2026\n\n**Your answer (COMPRESSED only):**\n\n### q4 (4/4)\n\n**Query:** A",
+          "candidate_answer": "**Offline judge ceiling:** TF-IDF overlap judge scores ~86% max on this corpus even at minimum compression; live multi-model judge needed for production floor checks. Q1 (unique research findings) cannot be answered from compressed corpus. **Selection skips all `drop` chunks:** Minimum compression on demo corpus is ~41%, not the 10\u201320% ladder start the experiment intended. `exam_prompts/*.md` in `demo_data/` are ingested by the lab project but excluded here (they pollute scores when included). #",
+          "score": 34.8,
+          "missing": "Missing key terms: duplicate, exact, near"
+        }
+      ],
+      "tokens_full": 10437,
+      "tokens_compressed": 727,
+      "passed": false
+    }
+  ],
+  "pareto_point": {
+    "token_reduction_pct": 94.1,
+    "understanding_pct": 44.1,
+    "label": "Cursor multi-model (simulated)"
+  },
+  "api_mode": "cursor_simulated",
+  "disclaimer": "orchestrator-simulated; for true multi-model run set API keys or use Cursor chat per exam_prompts/*.md",
+  "exam_corpus_dir": "/Users/tharm/dev/datter/demo_data/exam_corpus",
+  "cursor_model_slugs": {
+    "gpt55": "gpt-5.5-medium",
+    "opus": "claude-opus-4-8-thinking-high",
+    "sonnet": "claude-4.6-sonnet-medium-thinking",
+    "composer": "composer-2.5-fast"
+  }
+}

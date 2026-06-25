@@ -1,0 +1,89 @@
+{
+  "project_id": "government",
+  "project_name": "Treasury compliance RAG",
+  "quality_floor": 0.9,
+  "api_mode": "offline",
+  "disclaimer": "Offline TF-IDF judge fallback \u2014 production claims require live multi-model run.",
+  "generated_at": "2026-06-25T19:57:17.289002+00:00",
+  "ladder_targets": [
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "steps": [
+    {
+      "target_reduction": 0.1,
+      "actual_reduction_pct": 10.1,
+      "tokens_full": 131554,
+      "tokens_compressed": 118317,
+      "tokens_saved": 13237,
+      "min_score": 100.0,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 100.0,
+        "opus": 100.0,
+        "sonnet": 100.0,
+        "composer": 100.0
+      }
+    },
+    {
+      "target_reduction": 0.15,
+      "actual_reduction_pct": 15.1,
+      "tokens_full": 131554,
+      "tokens_compressed": 111755,
+      "tokens_saved": 19799,
+      "min_score": 100.0,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 100.0,
+        "opus": 100.0,
+        "sonnet": 100.0,
+        "composer": 100.0
+      }
+    },
+    {
+      "target_reduction": 0.2,
+      "actual_reduction_pct": 20.0,
+      "tokens_full": 131554,
+      "tokens_compressed": 105193,
+      "tokens_saved": 26361,
+      "min_score": 92.9,
+      "passed": true,
+      "model_scores": {
+        "gpt55": 92.9,
+        "opus": 92.9,
+        "sonnet": 92.9,
+        "composer": 92.9
+      }
+    },
+    {
+      "target_reduction": 0.3,
+      "actual_reduction_pct": 30.0,
+      "tokens_full": 131554,
+      "tokens_compressed": 92055,
+      "tokens_saved": 39499,
+      "min_score": 89.5,
+      "passed": false,
+      "model_scores": {
+        "gpt55": 89.5,
+        "opus": 89.5,
+        "sonnet": 89.5,
+        "composer": 89.5
+      }
+    }
+  ],
+  "stopped_early": true,
+  "best_at_floor": {
+    "target_reduction": 0.2,
+    "actual_reduction_pct": 20.0,
+    "min_score": 92.9,
+    "tokens_full": 131554,
+    "tokens_compressed": 105193,
+    "tokens_saved": 26361
+  }
+}

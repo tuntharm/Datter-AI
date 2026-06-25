@@ -1,0 +1,13 @@
+{
+  "task_description": "Structural audit lab — detect duplicates and low-value content in a mixed RAG corpus.",
+  "quality_floor": 0.90,
+  "target_token_reduction": 0.50,
+  "questions": [
+    {"id": "q1", "query": "What are the key research findings in the unique note?", "gold_hint": "research findings unique content"},
+    {"id": "q2", "query": "What policy requirements are documented?", "gold_hint": "policy requirements compliance"},
+    {"id": "q3", "query": "What technical specifications are defined?", "gold_hint": "technical specification requirements"},
+    {"id": "q4", "query": "Are there duplicate documents in this corpus?", "gold_hint": "duplicate exact near"},
+    {"id": "q5", "query": "What low-signal content should be excluded?", "gold_hint": "meeting notes low signal boilerplate"},
+    {"id": "q6", "query": "Which chunks have the highest information density?", "gold_hint": "information density useful content"}
+  ]
+}

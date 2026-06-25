@@ -1,0 +1,102 @@
+{
+  "mean_full_score": 100.0,
+  "mean_datter_score": 94.7,
+  "mean_random_score": 99.1,
+  "understanding_pct": 94.7,
+  "random_understanding_pct": 94.7,
+  "quality_floor": 0.9,
+  "target_reduction": 0.5,
+  "actual_reduction": 0.2005,
+  "max_safe_reduction_pct": 20.0,
+  "meets_quality_floor": true,
+  "disclaimer": "Building demo \u2014 offline understanding proxy (TF-IDF retrieval + token overlap). Production claims use developed eval harness.",
+  "questions": [
+    {
+      "question_id": "q1",
+      "query": "Why is social connection important for health?",
+      "full_answer": "Why social connection matters\nSocial health is as important as physical and mental health (2, 3). At the core of social health is social connection, which is the focus of this report and \nthe work of the WHO Commission on Social Connection. By strengthening social connection worldwide, resources will be freed \nfor a healthier, more productive, more meaningful future. 12\nFrom loneliness to social connection - charting a path to healthier societies: report of the WHO Commission on Social Connectio",
+      "datter_answer": "Why social connection matters\nSocial health is as important as physical and mental health (2, 3). At the core of social health is social connection, which is the focus of this report and \nthe work of the WHO Commission on Social Connection. By strengthening social connection worldwide, resources will be freed \nfor a healthier, more productive, more meaningful future. 12\nFrom loneliness to social connection - charting a path to healthier societies: report of the WHO Commission on Social Connectio",
+      "random_answer": "Why social connection matters\nSocial health is as important as physical and mental health (2, 3). At the core of social health is social connection, which is the focus of this report and \nthe work of the WHO Commission on Social Connection. By strengthening social connection worldwide, resources will be freed \nfor a healthier, more productive, more meaningful future. 12\nFrom loneliness to social connection - charting a path to healthier societies: report of the WHO Commission on Social Connectio",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: mortality, wellbeing"
+    },
+    {
+      "question_id": "q2",
+      "query": "What is social isolation and how does it affect people?",
+      "full_answer": "As discussed in Box 2, current evidence indicates that the increasing \ndigitalization of social interactions has mixed effects on social isolation and \nloneliness, depending on the type of technology, how it is used, why it is used \nand who uses it. Less evidence is available on community and societal risk factors, in particular on the \nmagnitude of the associations with loneliness and social isolation, than for individual \nand interpersonal risk factors, and they are not included in Table 3. Di",
+      "datter_answer": "As discussed in Box 2, current evidence indicates that the increasing \ndigitalization of social interactions has mixed effects on social isolation and \nloneliness, depending on the type of technology, how it is used, why it is used \nand who uses it. Less evidence is available on community and societal risk factors, in particular on the \nmagnitude of the associations with loneliness and social isolation, than for individual \nand interpersonal risk factors, and they are not included in Table 3. Di",
+      "random_answer": "As discussed in Box 2, current evidence indicates that the increasing \ndigitalization of social interactions has mixed effects on social isolation and \nloneliness, depending on the type of technology, how it is used, why it is used \nand who uses it. Less evidence is available on community and societal risk factors, in particular on the \nmagnitude of the associations with loneliness and social isolation, than for individual \nand interpersonal risk factors, and they are not included in Table 3. Di",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: health, outcomes"
+    },
+    {
+      "question_id": "q3",
+      "query": "Which populations are most at risk of social disconnection?",
+      "full_answer": "risk \nof cognitive decline and dementia in older \npopulations and poorer child cognitive \ndevelopment\nMental health and well-being\nSocial disconnection is linked to e.g. Most of the research on links between social disconnection and mortality has been \nconducted in high-income countries in Europe and north America. One meta-analysis \nof links between social isolation and risk of mortality showed similar risks in high  \nSocial\nconnection\nBiological\nStress hormones\nInflammation\nGene expression\nPsy",
+      "datter_answer": "risk \nof cognitive decline and dementia in older \npopulations and poorer child cognitive \ndevelopment\nMental health and well-being\nSocial disconnection is linked to e.g. Most of the research on links between social disconnection and mortality has been \nconducted in high-income countries in Europe and north America. One meta-analysis \nof links between social isolation and risk of mortality showed similar risks in high  \nSocial\nconnection\nBiological\nStress hormones\nInflammation\nGene expression\nPsy",
+      "random_answer": "risk \nof cognitive decline and dementia in older \npopulations and poorer child cognitive \ndevelopment\nMental health and well-being\nSocial disconnection is linked to e.g. Most of the research on links between social disconnection and mortality has been \nconducted in high-income countries in Europe and north America. One meta-analysis \nof links between social isolation and risk of mortality showed similar risks in high  \nSocial\nconnection\nBiological\nStress hormones\nInflammation\nGene expression\nPsy",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: elderly, groups, marginalized, vulnerable"
+    },
+    {
+      "question_id": "q4",
+      "query": "What interventions can strengthen social connection?",
+      "full_answer": "172\nFrom loneliness to social connection - charting a path to healthier societies: report of the WHO Commission on Social Connection\n8.2  Effectiveness of interventions  \nin different population groups\nUnderstanding which approaches are the most effective in preventing and \naddressing social disconnection in different population groups is a key consideration \nfor future research. ICT has been used in interventions for older \nadults to overcome the barriers to social connection that often arise w",
+      "datter_answer": "172\nFrom loneliness to social connection - charting a path to healthier societies: report of the WHO Commission on Social Connection\n8.2  Effectiveness of interventions  \nin different population groups\nUnderstanding which approaches are the most effective in preventing and \naddressing social disconnection in different population groups is a key consideration \nfor future research. ICT has been used in interventions for older \nadults to overcome the barriers to social connection that often arise w",
+      "random_answer": "172\nFrom loneliness to social connection - charting a path to healthier societies: report of the WHO Commission on Social Connection\n8.2  Effectiveness of interventions  \nin different population groups\nUnderstanding which approaches are the most effective in preventing and \naddressing social disconnection in different population groups is a key consideration \nfor future research. ICT has been used in interventions for older \nadults to overcome the barriers to social connection that often arise w",
+      "datter_score": 100.0,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: community, policy, programs"
+    },
+    {
+      "question_id": "q5",
+      "query": "How should governments address social connection?",
+      "full_answer": "WHO and other entities should encourage governments by providing technical \nassistance and support to create national policies to address social isolation and \nloneliness and to foster social connection as public health and development \npriorities. Governments will develop, adopt, fund, implement and monitor a national \npolicy, strategy or framework to promote social connection in which all sectors \nand all administrative levels are engaged to ensure that people experience social \nhealth and wel",
+      "datter_answer": "WHO and other entities should encourage governments by providing technical \nassistance and support to create national policies to address social isolation and \nloneliness and to foster social connection as public health and development \npriorities. Governments will develop, adopt, fund, implement and monitor a national \npolicy, strategy or framework to promote social connection in which all sectors \nand all administrative levels are engaged to ensure that people experience social \nhealth and wel",
+      "random_answer": "WHO and other entities should encourage governments by providing technical \nassistance and support to create national policies to address social isolation and \nloneliness and to foster social connection as public health and development \npriorities. Governments will develop, adopt, fund, implement and monitor a national \npolicy, strategy or framework to promote social connection in which all sectors \nand all administrative levels are engaged to ensure that people experience social \nhealth and wel",
+      "datter_score": 68.3,
+      "random_score": 100.0,
+      "missing_points": "Missing key terms: action, government"
+    },
+    {
+      "question_id": "q6",
+      "query": "What is the link between social connection and mental health?",
+      "full_answer": "At the core of social health is social connection, which is the focus of this report and \nthe work of the WHO Commission on Social Connection. Why social connection matters\nSocial health is as important as physical and mental health (2, 3). 1\nIntroduction\nThe World Health Organization (WHO) defines health as \u201ca state of complete physical, \nmental and social well-being and not merely the absence of disease or infirmity\u201d (1). A further seven countries were identified as having policies in which th",
+      "datter_answer": "At the core of social health is social connection, which is the focus of this report and \nthe work of the WHO Commission on Social Connection. Why social connection matters\nSocial health is as important as physical and mental health (2, 3). 1\nIntroduction\nThe World Health Organization (WHO) defines health as \u201ca state of complete physical, \nmental and social well-being and not merely the absence of disease or infirmity\u201d (1). A further seven countries were identified as having policies in which th",
+      "random_answer": "At the core of social health is social connection, which is the focus of this report and \nthe work of the WHO Commission on Social Connection. Why social connection matters\nSocial health is as important as physical and mental health (2, 3). 1\nIntroduction\nThe World Health Organization (WHO) defines health as \u201ca state of complete physical, \nmental and social well-being and not merely the absence of disease or infirmity\u201d (1). A further seven countries were identified as having policies in which th",
+      "datter_score": 100.0,
+      "random_score": 94.4,
+      "missing_points": "Missing key terms: anxiety, depression, support"
+    }
+  ],
+  "pareto_points": [
+    {
+      "token_reduction_pct": 0.0,
+      "understanding_pct": 100.0,
+      "label": "Full corpus"
+    },
+    {
+      "token_reduction_pct": 20.0,
+      "understanding_pct": 94.7,
+      "label": "Cut 20% target"
+    },
+    {
+      "token_reduction_pct": 30.1,
+      "understanding_pct": 77.7,
+      "label": "Cut 30% target"
+    },
+    {
+      "token_reduction_pct": 20.0,
+      "understanding_pct": 94.7,
+      "label": "Max safe cut (Datter)"
+    },
+    {
+      "token_reduction_pct": 20.0,
+      "understanding_pct": 94.7,
+      "label": "Random at same budget"
+    }
+  ]
+}

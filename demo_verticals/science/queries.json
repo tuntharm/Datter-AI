@@ -1,0 +1,13 @@
+{
+  "task_description": "Answer paleoclimate modeling questions from the CLIMBER-X paper for a research RAG assistant.",
+  "quality_floor": 0.90,
+  "target_token_reduction": 0.50,
+  "questions": [
+    {"id": "q1", "query": "What is CLIMBER-X and what does it model?", "gold_hint": "earth system model climate ice sheet"},
+    {"id": "q2", "query": "What paleoclimate period does the study focus on?", "gold_hint": "paleoclimate past climate simulation"},
+    {"id": "q3", "query": "How does the model represent ice sheet dynamics?", "gold_hint": "ice sheet dynamics model component"},
+    {"id": "q4", "query": "What climate variables are simulated?", "gold_hint": "temperature precipitation carbon"},
+    {"id": "q5", "query": "How is model validation performed?", "gold_hint": "validation comparison observational proxy"},
+    {"id": "q6", "query": "What are the main findings about past climate states?", "gold_hint": "findings climate state transition"}
+  ]
+}

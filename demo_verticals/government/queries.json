@@ -1,0 +1,13 @@
+{
+  "task_description": "Answer public finance and accountability questions for a Treasury compliance RAG assistant.",
+  "quality_floor": 0.90,
+  "target_token_reduction": 0.50,
+  "questions": [
+    {"id": "q1", "query": "What is the purpose of Managing Public Money?", "gold_hint": "guide for public sector on handling public money accountability"},
+    {"id": "q2", "query": "Who is accountable for public spending decisions?", "gold_hint": "accounting officers permanent secretaries ministers"},
+    {"id": "q3", "query": "What is value for money in public spending?", "gold_hint": "economy efficiency effectiveness best value"},
+    {"id": "q4", "query": "What approvals are needed before committing public funds?", "gold_hint": "approval authority spending limits delegation"},
+    {"id": "q5", "query": "How should irregularities or fraud be handled?", "gold_hint": "report investigate irregularity fraud"},
+    {"id": "q6", "query": "What role do internal controls play in public finance?", "gold_hint": "internal control risk management governance"}
+  ]
+}
