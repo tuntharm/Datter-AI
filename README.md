@@ -5,14 +5,14 @@
   <p><strong>The input gate before embedding spend.</strong></p>
 
   <p>
-    Upload a corpus → autonomous agents scan for redundancy → compress to the largest safe cut →
-    prove understanding is still above your quality floor — <em>before</em> you pay for embeddings, inference, or training.
+    Upload a corpus → audit redundancy → select a smaller corpus → test it against your quality floor —
+    <em>before</em> you pay for embeddings, inference, or training.
   </p>
 
   <p>
     <a href="https://github.com/tuntharm/Datter-AI"><img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python 3.10+" /></a>
     <a href="https://github.com/tuntharm/Datter-AI"><img src="https://img.shields.io/badge/Streamlit-local%20app-FF4B4B" alt="Streamlit" /></a>
-    <a href="https://github.com/tuntharm/Datter-AI"><img src="https://img.shields.io/badge/tests-30%20passed-brightgreen" alt="30 tests" /></a>
+    <a href="https://github.com/tuntharm/Datter-AI/actions/workflows/ci.yml"><img src="https://github.com/tuntharm/Datter-AI/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
     <a href="HACKATHON.md"><img src="https://img.shields.io/badge/hackathon-Cursor%20Hands%20Off%202026-8B5CF6" alt="Hackathon" /></a>
   </p>
 
@@ -26,7 +26,7 @@
   <img src="docs/assets/brain-icon.png" alt="Datter brain mark" width="96" />
 </p>
 
-**Datter.ai** finds the largest token cut you can make to your AI data while keeping downstream understanding above your quality floor.
+**Datter.ai** estimates how much of an AI corpus can be removed while keeping task-specific evaluation above a chosen quality floor.
 
 Most teams pay to embed, label, fine-tune, or train on everything. A large share is redundant, near-duplicate, or low-signal. Datter audits the corpus first, selects a minimum-sufficient subset under a token budget, and exports an optimised corpus with an audit trail — so you only spend on data that still answers the questions that matter.
 
@@ -40,28 +40,28 @@ Built for RAG teams, ML engineers, and document-heavy orgs who need **proof**, n
   <img src="docs/assets/dashboard-demo.png" alt="Datter.ai dashboard — compression, quality retained, and ROI panels" width="920" />
 </p>
 
-<p align="center"><em>Upload <code>managing_public_money.pdf</code> or pick a sample project — three outcome cards on one screen: compression, quality retained, and projected savings.</em></p>
+<p align="center"><em>The evaluated Government sample shows the export reduction, offline quality proxy, and projected cost from one reproducible run.</em></p>
 
 | Panel | What it shows |
 | --- | --- |
-| **A · Compression** | Max safe token cut and before/after token count |
+| **A · Compression** | Estimated token cut and before/after token count |
 | **B · Quality retained** | Q&A understanding at that cut (eval harness) or structural proxy when no queries are attached |
 | **C · ROI / savings** | Avoidable embedding spend identified from your cost assumptions |
 
-Tabs underneath cover **Proof** (per-question scores), **Export** (optimised `.zip`), **Executive** (business model), and **Audit** (agent log + chunk table).
+Tabs underneath cover **Proof** (per-question scores), **Export** (optimised `.zip`), **Executive** (business model), and **Audit** (pipeline log + chunk table).
 
 ---
 
 ## What it does
 
-- **Upload-first** — drag PDF, TXT, or MD files; agents scan automatically (no manual pipeline steps)
-- **7 autonomous agents** — Ingest → Chunk → Dedup → Score → Select → Eval → Report
+- **Upload-first** — drag PDF, TXT, or MD files; the pipeline scans automatically
+- **7 automated stages** — Ingest → Chunk → Dedup → Score → Select → Eval → Report
 - **Task-conditioned selection** — relevance boost from `queries.json` when you define downstream questions
 - **Proof loop** — offline TF-IDF retrieval + token-overlap judge (or LLM judge when API keys are set)
 - **Optimised export** — `.zip` of selected `.txt` chunks + `manifest.json`, plus Markdown/JSON audit reports
 - **Sample corpora** — Government, Social, Engineering, Science, and a fast Lab dataset for demos
 
-> **One-line pitch:** Datter finds the largest token cut you can make to your AI data while keeping downstream understanding above your quality floor — before you spend on embeddings, inference, or training.
+> **One-line pitch:** Datter estimates how much of an AI corpus can be removed while keeping task-specific evaluation above your quality floor — before you spend on embeddings, inference, or training.
 
 ---
 
@@ -85,11 +85,12 @@ On `managing_public_money.pdf` with Treasury compliance questions:
 
 | Metric | Value |
 | --- | --- |
-| Max safe cut @ 90% quality floor | **50%** |
-| Q&A understanding retained | **90.1%** |
-| Full corpus tokens → optimised | 131k → 46k |
+| Evaluation target | **50% token reduction** |
+| Q&A proxy retained | **90.1%** |
+| Quality floor | **90%** |
+| Judge | TF-IDF retrieval + token-overlap proxy |
 
-*Demo disclaimer: sample projects use an offline understanding proxy. Production claims require the full eval harness with representative client queries.*
+*Demo disclaimer: this is an illustrative offline proxy, not a production benchmark. Production claims require representative client queries and a validated evaluation harness.*
 
 ---
 
@@ -167,7 +168,7 @@ Datter-AI/
 ├── assets/brand/               # Brain icon + wordmark (also in docs/assets for README)
 ├── docs/assets/                # README screenshots and brand images
 ├── datter/
-│   ├── agent.py                # 7-agent streaming pipeline
+│   ├── agent.py                # Seven-stage streaming pipeline
 │   ├── project.py              # Sample projects + upload→sample matching
 │   ├── selection.py            # Token-budget cut + query relevance boost
 │   ├── export.py               # Optimised corpus zip export
@@ -177,7 +178,6 @@ Datter-AI/
 ├── demo_data/                  # Fast lab corpus
 ├── scripts/                    # Compression ladder, paper-summary team runners
 ├── tests/                      # 30 pytest tests
-├── brain/                      # Product strategy, experiments, orchestration notes
 ├── HACKATHON.md                # Demo script for judges / Loom
 └── AGENTS.md                   # Contributor routing for humans + agents
 ```
@@ -207,28 +207,26 @@ Baseline signals are informed by recent data-compression and selection literatur
 | [PreSelect 2025](https://proceedings.mlr.press/v267/shum25a.html) | Compression efficiency predicts downstream value |
 | [SoftDedup 2024](https://arxiv.org/abs/2407.06654) | Reweight vs hard-drop for near-duplicates |
 
-Deeper product and experiment notes live in [`brain/02_Product/Product Spine.md`](brain/02_Product/Product%20Spine.md).
-
 ---
 
 ## 60-second demo script
 
 1. *"AI teams pay to process everything — most of it is redundant."*
-2. Upload a PDF or click **Try sample → Government** — watch the agent log on the left.
-3. Point to **max safe cut**, **understanding retained**, and **avoidable embedding spend**.
+2. Upload a PDF or click **Try sample → Government** — watch the pipeline log on the left.
+3. Point to **estimated cut**, **quality retained**, and **avoidable embedding spend**.
 4. Open **Proof** — show per-question scores at the cut.
 5. Download the optimised corpus zip.
-6. *"Datter.ai — we know which data matters."*
+6. *"Datter.ai — test which data still matters before paying to process all of it."*
 
 Full judge script: [`HACKATHON.md`](HACKATHON.md).
 
 ---
 
-## Contributing
+## Feedback
 
-Issues and focused pull requests are welcome — especially around eval harness quality, selector improvements, and vertical demo corpora.
+Feedback and issues are welcome, especially around evaluation quality, selection methods, and representative demo corpora.
 
-Before changing product direction or brain notes, read [`AGENTS.md`](AGENTS.md) and start from [`brain/00_System/Datter Brain Manager.md`](brain/00_System/Datter%20Brain%20Manager.md).
+The repository is source-available but not currently open source. Please do not reuse or redistribute the code without permission.
 
 ---
 

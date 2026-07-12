@@ -458,7 +458,7 @@ def render_compression_panel(report: AnalysisReport, compressed: float) -> None:
             <h3>A · Compression</h3>
             <div class="ig-hero">
                 <span class="ig-hero-val">{compressed:.1f}%</span>
-                <span class="ig-hero-sub">max safe cut in optimised export</span>
+                <span class="ig-hero-sub">estimated cut in optimised export</span>
             </div>
             <div class="ig-token-flow">
                 <span class="before">{before:,}</span>
@@ -516,12 +516,18 @@ def render_quality_panel(report: AnalysisReport) -> None:
 
 
 def render_savings_panel(report: AnalysisReport, compressed: float) -> None:
+    def format_usd(value: float) -> str:
+        return f"${value:,.4f}" if 0 < value < 0.01 else f"${value:,.2f}"
+
+    avoidable_cost = format_usd(report.avoidable_cost_usd)
+    total_cost = format_usd(report.total_cost_usd)
+    optimised_cost = format_usd(report.total_cost_usd - report.avoidable_cost_usd)
     st.markdown(
         f"""
         <div class="ig-panel">
             <h3>C · ROI / savings</h3>
             <div class="ig-hero">
-                <span class="ig-hero-val green">${report.avoidable_cost_usd:,.2f}</span>
+                <span class="ig-hero-val green">{avoidable_cost}</span>
                 <span class="ig-hero-sub">avoidable embedding spend identified</span>
             </div>
             <div class="ig-stat-row">
@@ -531,11 +537,11 @@ def render_savings_panel(report: AnalysisReport, compressed: float) -> None:
                 </div>
                 <div class="ig-stat">
                     <div class="k">Full corpus cost</div>
-                    <div class="v dim">${report.total_cost_usd:,.2f}</div>
+                    <div class="v dim">{total_cost}</div>
                 </div>
                 <div class="ig-stat">
                     <div class="k">After optimisation</div>
-                    <div class="v dim">${report.total_cost_usd - report.avoidable_cost_usd:,.2f}</div>
+                    <div class="v dim">{optimised_cost}</div>
                 </div>
             </div>
         </div>
