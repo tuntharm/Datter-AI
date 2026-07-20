@@ -26,9 +26,9 @@
   <img src="docs/assets/brain-icon.png" alt="Datter brain mark" width="96" />
 </p>
 
-**Datter.ai** estimates how much of an AI corpus can be removed while keeping task-specific evaluation above a chosen quality floor.
+**Datter.ai** audits an AI corpus for redundancy and proposes a smaller, token-budgeted subset. When you supply representative questions in `queries.json`, it can evaluate that specific cut against a configured quality floor; without questions, its output is a structural audit rather than a performance claim.
 
-Most teams pay to embed, label, fine-tune, or train on everything. A large share is redundant, near-duplicate, or low-signal. Datter audits the corpus first, selects a minimum-sufficient subset under a token budget, and exports an optimised corpus with an audit trail — so you only spend on data that still answers the questions that matter.
+Most teams pay to embed, label, fine-tune, or train on everything. A large share is redundant, near-duplicate, or low-signal. Datter audits the corpus first, ranks chunks for a token budget, and exports the selected candidate with an audit trail. It does **not** establish a universally minimum-sufficient corpus: whether a cut is acceptable depends on the downstream task, representative evaluation set, and validation method.
 
 Built for RAG teams, ML engineers, and document-heavy orgs who need **proof**, not just a compression ratio.
 
@@ -45,7 +45,7 @@ Built for RAG teams, ML engineers, and document-heavy orgs who need **proof**, n
 | Panel | What it shows |
 | --- | --- |
 | **A · Compression** | Estimated token cut and before/after token count |
-| **B · Quality retained** | Q&A understanding at that cut (eval harness) or structural proxy when no queries are attached |
+| **B · Quality retained** | Offline Q&A proxy for a sample with queries, or a structural proxy when no queries are attached |
 | **C · ROI / savings** | Avoidable embedding spend identified from your cost assumptions |
 
 Tabs underneath cover **Proof** (per-question scores), **Export** (optimised `.zip`), **Executive** (business model), and **Audit** (pipeline log + chunk table).
@@ -61,7 +61,7 @@ Tabs underneath cover **Proof** (per-question scores), **Export** (optimised `.z
 - **Optimised export** — `.zip` of selected `.txt` chunks + `manifest.json`, plus Markdown/JSON audit reports
 - **Sample corpora** — Government, Social, Engineering, Science, and a fast Lab dataset for demos
 
-> **One-line pitch:** Datter estimates how much of an AI corpus can be removed while keeping task-specific evaluation above your quality floor — before you spend on embeddings, inference, or training.
+> **One-line pitch:** Datter audits a corpus before embedding spend, then proposes a smaller candidate subset and checks it only against the quality test you provide.
 
 ---
 
@@ -79,18 +79,33 @@ Tabs underneath cover **Proof** (per-question scores), **Export** (optimised `.z
 | S3 / SQL / Kafka connectors | **UI placeholder** | Shown as coming soon |
 | Auth, billing, multi-tenant | **Out of scope (MVP)** | Local-first hackathon build |
 
-### Example proof result (Government sample)
+### Included Government-sample result — offline proxy, not production validation
 
-On `managing_public_money.pdf` with Treasury compliance questions:
+The checked-in [`eval_cache.json`](demo_verticals/government/eval_cache.json) records one run on `managing_public_money.pdf` with six Treasury-compliance questions:
 
 | Metric | Value |
 | --- | --- |
-| Evaluation target | **50% token reduction** |
-| Q&A proxy retained | **90.1%** |
+| Highest passing evaluated cut in this cached run | **50.01% actual token reduction** |
+| Offline Q&A proxy score at that cut | **90.1%** |
 | Quality floor | **90%** |
 | Judge | TF-IDF retrieval + token-overlap proxy |
 
-*Demo disclaimer: this is an illustrative offline proxy, not a production benchmark. Production claims require representative client queries and a validated evaluation harness.*
+Read this result narrowly: it is the highest passing cut recorded for **one bundled document and six questions** using an offline TF-IDF/token-overlap proxy. It is **not** production RAG validation, an LLM-judge result, or evidence that a 50% cut will retain quality for another corpus or task. Production claims require representative client queries and a separately validated evaluation harness.
+
+### Inspect or rerun the bundled evidence
+
+```bash
+# Inspect the cached source record behind the dashboard metric
+python -m json.tool demo_verticals/government/eval_cache.json
+
+# Check the selection and offline-evaluation behaviour
+pytest tests/test_selection.py tests/test_eval_offline.py -q
+
+# Run a fresh Government compression ladder at the same 90% floor
+python scripts/run_compression_ladder.py --project government --quality-floor 0.90
+```
+
+The last command writes `demo_verticals/government/compression_ladder.json` and its Markdown summary. The committed [ladder record](demo_verticals/government/compression_ladder.json) is a separate dated offline sweep whose tested steps topped out at 20%; it does not independently confirm the cached 50.01% result. Treat each artifact as evidence for its own run and method.
 
 ---
 
@@ -109,7 +124,7 @@ flowchart LR
     H --> I
 ```
 
-**Selection engine** is the core: score chunks for marginal value, pack the highest-signal set into a token budget, then verify (or estimate) that downstream Q&A understanding still clears your floor.
+**Selection engine** is the core: it scores chunks for marginal value and packs a candidate set into a token budget. With representative questions, Datter can run its configured evaluation loop; without them, it cannot verify downstream Q&A quality.
 
 ---
 
